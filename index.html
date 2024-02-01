@@ -144,8 +144,28 @@ h1 {
     left: 0;
     display: none;
     position: fixed;
-    color: red;
+    color: white;
     height: 100vh;
+    background-image: url(https://i.pinimg.com/originals/5f/89/98/5f8998c032275d272b0db34991b87fd6.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .salt {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: white;
+    height: 100vh;
+    background-image: url(https://media0.giphy.com/media/7lKrHZoJY3eXlzdUMZ/200w.gif?cid=82a1493b0lztdiivm6y974dey1ue27iq1usc61p75rynzs0n&ep=v1_gifs_related&rid=200w.gif&ct=g);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   button {
     margin-right: 30px;
@@ -198,7 +218,11 @@ h1 {
   </div>
   <div class="cooking" id="cooking">
     <h1>Entro na cozinha e esquento a àgua para preparar um café, de todo modo, modesto. Penso em colocar açúcar.</h1>
-    <button>Colocar açúcar</button><button >Colocar sal?</button>
+    <button>Colocar açúcar</button><button onclick="saltDiv()">Colocar sal?</button>
+  </div>
+  <div class="salt" id="salt">
+    <h1>Mas que porra é essa? Eu coloquei sal na desgraça do meu café. Por que Deus? Eu estraguei minha droga de café. Agora está amargo. O que eu faço com esse café? </h1>
+    <button>Beber o café</button><button>Jogar fora</button>
   </div>
   <script>
   var div = document.getElementById('fdiv');
@@ -302,6 +326,19 @@ h1 {
     }
     else {
       cook.style.display = 'none'
+      display = 1;
+    }
+  }
+  var salt = document.getElementById('salt');
+  var display = 0;
+  
+  function saltDiv() {
+    if (display == 1) {
+      salt.style.display = 'block'
+      display = 0;
+    }
+    else {
+      salt.style.display = 'none'
       display = 1;
     }
   }
