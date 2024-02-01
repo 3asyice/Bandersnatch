@@ -21,10 +21,15 @@ body, html {
 h1 {
   font-size:15px;
   text-align:justify;
-  padding-left: 30px;
-  padding-right: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding:20px;
+  border-radius:20px;
+  border:1px solid yellow;
   font-family: 'Times New Roman', Times, serif;
-  padding-top:30px;
+  margin-top:30px;
+  background-color:rgba(255, 255, 255, 0.5);
+  color:#000000;
   
 }
   .fdiv {
@@ -280,6 +285,42 @@ h1 {
     color: white;
     height: 100vh;
   }
+  .gatin {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: white;
+    height: 100vh;
+  }
+  .ignoring {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: white;
+    height: 100vh;
+  }
+  .killing {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: white;
+    height: 100vh;
+  }
   button {
     margin-right: 30px;
     margin-left: 30px;
@@ -313,11 +354,11 @@ h1 {
   </div>
   <div class="ddiv" id="ddiv">
     <h1>Eu pergunto pelo nome do fantasma. E ele me diz ser um tal de Ghost. A sua voz é rouca e assustadora ao mesmo tempo. Quero perguntar como é estar do outro lado, mas estou com medo da resposta.</h1>
-    <button onclick="ghost()">Perguntar ao Ghost</button><button>Ignorar o Ghost</button>
+    <button onclick="ghost()">Perguntar ao Ghost</button><button onclick="ignore()">Ignorar o Ghost</button>
   </div>
   <div class="goaway" id="goaway">
     <h1>O fantasma desaparece. Penso em voltar a dormir.</h1>
-    <button>Voltar a dormir</button> <button>Ficar acordado</button>
+    <button onclick="()">Voltar a dormir</button> <button>Ficar acordado</button>
   </div>
   <div class="bath" id="bath">
     <h1>Entro no banheiro. Encontro a minha escova e meu listerine. Penso em escovar meus dentes, mas alguém começa a bater violentamente na porta.</h1>
@@ -329,7 +370,7 @@ h1 {
   </div>
   <div class="teeth" id="teeth">
     <h1>Meus dentes são escovados pela minha escova de dentes automática. O sabor da pasta entra em contato com o meu paladar. Sinto vontade de vomitar quando escovo a minha língua... Eu termino e enxaguo a boca com o listerine branqueador de dentes recomendado pela dentista. Termino... Saio do banheiro e me deparo com um gato preto sentado no sofá, dentro de casa.</h1>
-    <button>Adotar o gato</button> <button>Tirar o gato de casa</button>
+    <button>Adotar o gato</button> <button onclick="nocat()">Tirar o gato de casa</button>
   </div>
   <div class="cooking" id="cooking">
     <h1>Entro na cozinha e esquento a àgua para preparar um café, de todo modo, modesto e refinado. Penso em colocar açúcar.</h1>
@@ -369,6 +410,18 @@ h1 {
   <div class="boss" id="boss">
     <h1>Eu ligo para o chefe: "Alô, sou eu o Frank. Eu só estou ligando porque eu quero me demitir dessa sua espelunca velha e barata. Você é o maior merda que eu já conheci em toda a minha vida! Noé. Saiba que a minha vida não depende só de puxar o saco mole do chefe, mas também de preservar a merda da minha sanidade mental. Seu otário de merda!"</h1>
     <button>Desligar</button><button>Gritar</button>
+  </div>
+  <div class="gatin" id="gatin">
+    <h1>Eu tento pegar o gato, mas ele me arranhou quando peguei ele. Então peguei um pano e tomei o máximo de cuidado para não levar mais arranhões. Pensei em jogá-lo na pátio da vizinha.</h1>
+    <button>Jogar no pátio da vizinha</button><button onclick="killthecat()">Matar o gato</button>
+    
+  </div>
+  <div class="ignoring" id="ignoring">
+    <h1>Deixo o fantasma de lado e sigo o meu dia normalmente. </h1>
+  </div>
+  <div class="killing" id="killing">
+    <h1>Coloquei o gato em uma bolsa velha, atei cinco vezes para não escapar. E preparei uma vassoura de madeira. Matei o gato a vassouradas ou, até o gatinho desmaiar. Não verifiquei se o gato estava morto, logo joguei a bolsa velha em um rio, se não morreu a vassouradas, agora, definitivamente deve morrer afogado.</h1>
+    
   </div>
   <script>
   var div = document.getElementById('fdiv');
@@ -589,6 +642,45 @@ h1 {
     }
     else {
       calling.style.display = 'none'
+      display = 1;
+    }
+  }
+  var cat = document.getElementById('gatin');
+  var display = 0;
+  
+  function nocat() {
+    if (display == 1) {
+      cat.style.display = 'block'
+      display = 0;
+    }
+    else {
+      cat.style.display = 'none'
+      display = 1;
+    }
+  }
+  var dgaf = document.getElementById('ignoring');
+  var display = 0;
+  
+  function ignore() {
+    if (display == 1) {
+      dgaf.style.display = 'block'
+      display = 0;
+    }
+    else {
+      dgaf.style.display = 'none'
+      display = 1;
+    }
+  }
+  var kill = document.getElementById('killing');
+  var display = 0;
+  
+  function killthecat() {
+    if (display == 1) {
+      kill.style.display = 'block'
+      display = 0;
+    }
+    else {
+      kill.style.display = 'none'
       display = 1;
     }
   }
