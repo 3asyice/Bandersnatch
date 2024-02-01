@@ -297,6 +297,18 @@ h1 {
     color: white;
     height: 100vh;
   }
+  .sayHi {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: white;
+    height: 100vh;
+  }
   .ignoring {
     text-align: center;
     background-color:black;
@@ -319,6 +331,30 @@ h1 {
     display: none;
     position: fixed;
     color: white;
+    height: 100vh;
+  }
+  .staying {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: white;
+    height: 100vh;
+  }
+  .schooling {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: red;
     height: 100vh;
   }
   button {
@@ -393,7 +429,7 @@ h1 {
   </div>
   <div class="scare" id="scare">
     <h1>A pobre criancinha saiu correndo assustada. Eu flutuei até encontrar ela de novo. E possuí o corpo da criança. Assim a sua alma foi para o outro lado da vida, o lado dos mortos. Era divertido ser criança de novo, mas fiquei pensando na pobre criança que virou fantasma, agora, ela estava me assombrando, me observando, me olhando com o rosto de cãozinho triste.</h1>
-    <button>Sair do corpo</button><button >Continuar no corpo</button>
+    <button>Sair do corpo</button><button onclick="stay()">Continuar no corpo</button>
   </div>
   <div class="darsal" id="darsal">
     <h1>Eu coloco meio kilo de sal em um potinho e entrego para o velho senhor. Ele me olha nos olhos e agradece com um amuleto da sorte. O que me fez pensar em recusar.</h1>
@@ -421,6 +457,18 @@ h1 {
   </div>
   <div class="killing" id="killing">
     <h1>Coloquei o gato em uma bolsa velha, atei cinco vezes para não escapar. E preparei uma vassoura de madeira. Matei o gato a vassouradas ou, até o gatinho desmaiar. Não verifiquei se o gato estava morto, logo joguei a bolsa velha em um rio, se não morreu a vassouradas, agora, definitivamente deve morrer afogado.</h1>
+  </div>
+  <div class="staying" id="staying">
+    <h1>Fiquei no corpo da criança... E nunca mais a devolvi seu corpo. Se passaram 10 anos depois, ainda, a criança esperava eu devolvê-la seu corpo. Mas quando tentava sair do corpo, uma força além do normal, me puxava de volta para dentro dele. Eu já tinha ficado muito tempo no corpo da criança, que a casca começou a me aceitar como seu verdadeiro hospedeiro. Em aparência, eu era um adolescente... mas na realidade, era mais velho do que isso. Tinha que ir para a escola, por obrigação.</h1>
+    <button onclick="school()">Ir para a escola</button><button>Ficar em casa</button>
+  </div>
+  <div class="schooling" id="schooling">
+    <h1>Eu havia feito alguns amigos na escola... era um grupinho de 5 pessoas. Eu tinha começado a fazer amigos pelo facebook... e foi a primeira vez que vi uma amigo do facebook na vida real... O nome dela é Paloma. Nós conversava fazia alguns meses, mas nunca haviámos se visto pessoalmente. Então ela passou por perto e me cumprimentou.</h1>
+    <button onclick="sayhi()">Cumprimentar</button>
+ <button>Ignorar sua existência</button>
+  </div>
+  <div class="sayHi" id="sayHi">
+    <h1>Eu a cumprimentei.. mas minha voz quase não saiu de tão baixinha que era, parecia que eu estava em choque ou, com o rosto de expressão de inacreditável. Ela era tão popular, o pessoal do 9° ano seguia ela para todos os cantos da escola, eram seus seguidores fiéis.</h1>
     
   </div>
   <script>
@@ -681,6 +729,45 @@ h1 {
     }
     else {
       kill.style.display = 'none'
+      display = 1;
+    }
+  }
+  var ficar = document.getElementById('staying');
+  var display = 0;
+  
+  function stay() {
+    if (display == 1) {
+      ficar.style.display = 'block'
+      display = 0;
+    }
+    else {
+      ficar.style.display = 'none'
+      display = 1;
+    }
+  }
+  var escola = document.getElementById('schooling');
+  var display = 0;
+  
+  function school() {
+    if (display == 1) {
+      escola.style.display = 'block'
+      display = 0;
+    }
+    else {
+      escola.style.display = 'none'
+      display = 1;
+    }
+  }
+  var hi = document.getElementById('sayHi');
+  var display = 0;
+  
+  function sayhi() {
+    if (display == 1) {
+      hi.style.display = 'block'
+      display = 0;
+    }
+    else {
+      hi.style.display = 'none'
       display = 1;
     }
   }
