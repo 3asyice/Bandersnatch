@@ -188,6 +188,10 @@ h1 {
     position: fixed;
     color: white;
     height: 100vh;
+    background-image: url(https://www.picgifs.com/food-and-drinks/food-and-drinks/sugar/food-and-drinks-sugar-031515.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   .fantasma {
     text-align: center;
@@ -247,6 +251,10 @@ h1 {
     position: fixed;
     color: white;
     height: 100vh;
+    background-image: url(https://media.tenor.com/SV2oZKFhUhwAAAAM/salt-bae-monalisa.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   .coffee {
     text-align: center;
@@ -259,6 +267,10 @@ h1 {
     position: fixed;
     color: white;
     height: 100vh;
+    background-image: url(https://media1.tenor.com/m/An1nVuhkVU8AAAAC/hot-coffee-pixel.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   
   .faltar {
@@ -272,6 +284,10 @@ h1 {
     position: fixed;
     color: white;
     height: 100vh;
+    background-image: url(https://wallpaperaccess.com/full/8351232.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   .boss {
     text-align: center;
@@ -284,6 +300,9 @@ h1 {
     position: fixed;
     color: white;
     height: 100vh;
+    background-image: url(https://www.animatedimages.org/data/media/325/animated-telephone-image-0081.gif);
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .gatin {
     text-align: center;
@@ -296,6 +315,10 @@ h1 {
     position: fixed;
     color: white;
     height: 100vh;
+    background-image: url(https://media1.giphy.com/media/3oEjHFHaBKjH2lojSg/giphy.gif?cid=6c09b9521vc0vb09ka3ipxgurve8p3l0hsjk00op6m6sk0sd&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   .sayHi {
     text-align: center;
@@ -332,6 +355,10 @@ h1 {
     position: fixed;
     color: white;
     height: 100vh;
+    background-image: url(https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/2/dead-cat-oil-on-canvas50-x-61-cm-theodore-gericault-1791-1824.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   .staying {
     text-align: center;
@@ -344,6 +371,10 @@ h1 {
     position: fixed;
     color: white;
     height: 100vh;
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages-wixmp-ed30a86b8c4ca887773594c2.wixmp.com%2Fi%2Fbe7487b8-7211-4627-997b-4c3b42d64bda%2Fd81p7uv-31b4175a-2d80-4399-bb1e-8aa6ae692f01.png&f=1&nofb=1&ipt=202110e056c1ede6e2f938d6bf37019011245fa56fc2781a086a48e5744923d0&ipo=images);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   .schooling {
     text-align: center;
@@ -356,6 +387,22 @@ h1 {
     position: fixed;
     color: red;
     height: 100vh;
+  }
+  .working {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: red;
+    height: 100vh;
+    background-image: url(https://usagif.com/wp-content/uploads/gif-funny-work-23.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   button {
     margin-right: 30px;
@@ -437,7 +484,7 @@ h1 {
   </div>
   <div class="coffee" id="coffee">
     <h1>Coloco o café fora. Um grande desperdício. Olho para o relógio e são 06:30. Vou em direção ao armário e coloco minha roupa de trabalho e, em seguida, coloco um pouco de perfume.</h1>
-    <button>Ir trabalhar</button><button onclick="miss()">Faltar o trabalho</button>
+    <button onclick="job()">Ir trabalhar</button><button onclick="miss()">Faltar o trabalho</button>
   </div>
   <div class="faltar" id="faltar">
     <h1>Não estou com vontade de ir trabalhar hoje. Talvez amanhã. Hoje vou fingir que não tenho que trabalhar. A minha preguiça fala mais alto. E além do mais, aquele chefe barrigudo não valoriza seus funcionários... Devo pedir demissão em breve. Talvez eu ligue por telefone e me demita.</h1>
@@ -470,6 +517,10 @@ h1 {
   <div class="sayHi" id="sayHi">
     <h1>Eu a cumprimentei.. mas minha voz quase não saiu de tão baixinha que era, parecia que eu estava em choque ou, com o rosto de expressão de inacreditável. Ela era tão popular, o pessoal do 9° ano seguia ela para todos os cantos da escola, eram seus seguidores fiéis.</h1>
     
+  </div>
+  <div class="working" id="working">
+    <h1>Fui ao meu lugar de trabalho. Esse dia foi um total caos no trabalho, pois o chefe encheu o saco o dia todo, até o momento em que explodi e baguncei todo o escritório. Assim sendo, pela surpresa de todos, fui demitido.</h1>
+    <button>Sair do trabalho</button> <button>Matar o chefe</button>
   </div>
   <script>
   var div = document.getElementById('fdiv');
@@ -768,6 +819,19 @@ h1 {
     }
     else {
       hi.style.display = 'none'
+      display = 1;
+    }
+  }
+  var work = document.getElementById('working');
+  var display = 0;
+  
+  function job() {
+    if (display == 1) {
+      work.style.display = 'block'
+      display = 0;
+    }
+    else {
+      work.style.display = 'none'
       display = 1;
     }
   }
