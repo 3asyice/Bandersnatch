@@ -208,10 +208,67 @@ h1 {
     left: 0;
     display: none;
     position: fixed;
+    color: red;
+    height: 100vh;
+    background-image: url(https://bestanimations.com/media/scary-halloween/1105686778haloween-scary-ghost-3-3.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .scare {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: white;
+    height: 100vh;
+    background-image: url(https://media3.giphy.com/media/khLv6cbb0VoedBsiaF/giphy.gif?cid=790b761130p8afzvusvsaeju3mbsxzt6w260hgip1se4cu0k&ep=v1_gifs_search&rid=giphy.gif&ct=g);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .darsal {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
     color: white;
     height: 100vh;
   }
-  .scare {
+  .coffee {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: white;
+    height: 100vh;
+  }
+  
+  .faltar {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: white;
+    height: 100vh;
+  }
+  .boss {
     text-align: center;
     background-color:black;
     top: 0;
@@ -259,7 +316,8 @@ h1 {
     <button onclick="ghost()">Perguntar ao Ghost</button><button>Ignorar o Ghost</button>
   </div>
   <div class="goaway" id="goaway">
-    <h1>O fantasma desaparece. Penso em fazer um café ou um chá para relaxar melhor.</h1>
+    <h1>O fantasma desaparece. Penso em voltar a dormir.</h1>
+    <button>Voltar a dormir</button> <button>Ficar acordado</button>
   </div>
   <div class="bath" id="bath">
     <h1>Entro no banheiro. Encontro a minha escova e meu listerine. Penso em escovar meus dentes, mas alguém começa a bater violentamente na porta.</h1>
@@ -267,7 +325,7 @@ h1 {
   </div>
   <div class="porta" id="porta">
     <h1>Ao abrir a porta me deparo com um velho senhor. Nunca tinha visto ele antes. Dou uma leve olhadinha para o meu relógio de pulso e, agora, são 05:46. O velho senhor está me pedindo sal a essas horas.</h1>
-    <button>Emprestar sal</button> <button>Fechar a porta</button>
+    <button onclick="emprestar()">Emprestar sal</button> <button>Fechar a porta</button>
   </div>
   <div class="teeth" id="teeth">
     <h1>Meus dentes são escovados pela minha escova de dentes automática. O sabor da pasta entra em contato com o meu paladar. Sinto vontade de vomitar quando escovo a minha língua... Eu termino e enxaguo a boca com o listerine branqueador de dentes recomendado pela dentista. Termino... Saio do banheiro e me deparo com um gato preto sentado no sofá, dentro de casa.</h1>
@@ -279,7 +337,7 @@ h1 {
   </div>
   <div class="salt" id="salt">
     <h1>Mas que porra é essa? Eu coloquei sal na desgraça do meu café. Por que Deus? Eu estraguei minha droga de café. Agora está amargo. O que eu faço com esse café? </h1>
-    <button>Beber o café</button><button>Jogar fora</button>
+    <button>Beber o café</button><button onclick="cafe()">Jogar fora</button>
   </div>
   <div class="sugar" id="sugar">
     <h1>O café ficou mais saboroso do que eu imaginei que ficaria. Uma delícia. Esse café vai fazer meu dia melhorar muito. Vou ter disposição para fazer qualquer coisa.</h1>
@@ -293,8 +351,24 @@ h1 {
     <button onclick="jumpscare()">Assustá-la</button><button>Falar com a criança</button>
   </div>
   <div class="scare" id="scare">
-    <h1>A pobre criancinha saiu correndo assustada. Eu flutuei até encontrar ela de novo. E possuí o corpo da criança. Assim a criança foi para o outro lado da vida, o lado dos mortos. Era divertido ser criança de novo, mas fiquei pensando na pobre criança que virou fantasma, agora, ela estava me assombrando, me observando, me olhando com o rosto de cãozinho triste.</h1>
+    <h1>A pobre criancinha saiu correndo assustada. Eu flutuei até encontrar ela de novo. E possuí o corpo da criança. Assim a sua alma foi para o outro lado da vida, o lado dos mortos. Era divertido ser criança de novo, mas fiquei pensando na pobre criança que virou fantasma, agora, ela estava me assombrando, me observando, me olhando com o rosto de cãozinho triste.</h1>
     <button>Sair do corpo</button><button >Continuar no corpo</button>
+  </div>
+  <div class="darsal" id="darsal">
+    <h1>Eu coloco meio kilo de sal em um potinho e entrego para o velho senhor. Ele me olha nos olhos e agradece com um amuleto da sorte. O que me fez pensar em recusar.</h1>
+    <button>Pegar o amuleto</button><button>Recusar</button>
+  </div>
+  <div class="coffee" id="coffee">
+    <h1>Coloco o café fora. Um grande desperdício. Olho para o relógio e são 06:30. Vou em direção ao armário e coloco minha roupa de trabalho e, em seguida, coloco um pouco de perfume.</h1>
+    <button>Ir trabalhar</button><button onclick="miss()">Faltar o trabalho</button>
+  </div>
+  <div class="faltar" id="faltar">
+    <h1>Não estou com vontade de ir trabalhar hoje. Talvez amanhã. Hoje vou fingir que não tenho que trabalhar. A minha preguiça fala mais alto. E além do mais, aquele chefe barrigudo não valoriza seus funcionários... Devo pedir demissão em breve. Talvez eu ligue por telefone e me demita.</h1>
+    <button onclick="call()">Ligar para o chefe</button> <button>Deixar para amanhã</button>
+  </div>
+  <div class="boss" id="boss">
+    <h1>Eu ligo para o chefe: "Alô, sou eu o Frank. Eu só estou ligando porque eu quero me demitir dessa sua espelunca velha e barata. Você é o maior merda que eu já conheci em toda a minha vida! Noé. Saiba que a minha vida não depende só de puxar o saco mole do chefe, mas também de preservar a merda da minha sanidade mental. Seu otário de merda!"</h1>
+    <button>Desligar</button><button>Gritar</button>
   </div>
   <script>
   var div = document.getElementById('fdiv');
@@ -463,6 +537,58 @@ h1 {
     }
     else {
       scare.style.display = 'none'
+      display = 1;
+    }
+  }
+  var sal = document.getElementById('darsal');
+  var display = 0;
+  
+  function emprestar() {
+    if (display == 1) {
+      sal.style.display = 'block'
+      display = 0;
+    }
+    else {
+      sal.style.display = 'none'
+      display = 1;
+    }
+  }
+  var cof = document.getElementById('coffee');
+  var display = 0;
+  
+  function cafe() {
+    if (display == 1) {
+      cof.style.display = 'block'
+      display = 0;
+    }
+    else {
+      cof.style.display = 'none'
+      display = 1;
+    }
+  }
+  var divmiss = document.getElementById('faltar');
+  var display = 0;
+  
+  function miss() {
+    if (display == 1) {
+      divmiss.style.display = 'block'
+      display = 0;
+    }
+    else {
+      divmiss.style.display = 'none'
+      display = 1;
+    }
+  }
+  var calling = document.getElementById('boss');
+  var display = 0;
+  
+  function call() {
+    if (display == 1) {
+      calling.style.display = 'block'
+      display = 0;
+    }
+    else {
+      calling.style.display = 'none'
       display = 1;
     }
   }
