@@ -103,10 +103,62 @@ h1 {
     background-position: center;
     
   }
+  .porta {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: white;
+    height: 100vh;
+    background-image: url(https://media0.giphy.com/media/l378znZcUM7b6VDyM/200w.gif?cid=82a1493bd0xt8cwvztewdul2mccz6mdw81u1ocbsox0vygbj&ep=v1_gifs_related&rid=200w.gif&ct=g);
+    background-position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .teeth {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: red;
+    height: 100vh;
+    background-image: url(https://ugokawaii.com/wp-content/uploads/2023/05/brushing.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .cooking {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: red;
+    height: 100vh;
+  }
   button {
     margin-right: 30px;
     margin-left: 30px;
     background-color: #B0FF00;
+    padding: 7px;
+    margin-top:40px;
+    border-radius: 20px;
+  }
+  button:hover {
+    margin-right: 30px;
+    margin-left: 30px;
+    background-color: #0FA8E2;
     padding: 7px;
     margin-top:40px;
     border-radius: 20px;
@@ -124,7 +176,7 @@ h1 {
   </div>
   <div class="gdiv" id="gdiv"> 
   <h1>Eu continuo dormindo... Dormindo... Tenho um pesadelo...Zzz... O homem vestido de fantasia de coelho está me perseguindo e me fazendo de marionete com as suas mãos. E de repente levo um golpe na cabeça em meu próprio sonho. Sangro, preciso ir a um hospital. Mas isso é um sonho... O que eu faço? Minha cabeça está sangrando. Acordo em um grande susto. Penso em ir ao banheiro ou para a cozinha comer algo.</h1>
-  <button onclick="aOne()">Ir ao banheiro</button> <button>Ir a cozinha</button>
+  <button onclick="aOne()">Ir ao banheiro</button> <button onclick="cozinha()">Ir a cozinha</button>
   </div>
   <div class="ddiv" id="ddiv">
     <h1>Eu pergunto pelo nome do fantasma. E ele me diz ser um tal de Ghost. A sua voz é rouca e assustadora ao mesmo tempo.</h1>
@@ -134,7 +186,19 @@ h1 {
   </div>
   <div class="bath" id="bath">
     <h1>Entro no banheiro. Encontro a minha escova e meu listerine. Penso em escovar meus dentes, mas alguém começa a bater violentamente na porta.</h1>
-    <button >Atender a porta</button> <button>Escovar os dentes</button>
+    <button onclick="theDoor()">Atender a porta</button> <button onclick="brush()">Escovar os dentes</button>
+  </div>
+  <div class="porta" id="porta">
+    <h1>Ao abrir a porta me deparo com um velho senhor. Nunca tinha visto ele antes. Dou uma leve olhadinha para o meu relógio de pulso e, agora, são 05:46. O velho senhor está me pedindo sal a essas horas.</h1>
+    <button>Emprestar sal</button> <button>Fechar a porta</button>
+  </div>
+  <div class="teeth" id="teeth">
+    <h1>Meu dentes são escovados pela minha escova de dentes automática. O sabor da pasta entra em contato com o meu paladar. Sinto vontade de vomitar quando escovo a minha língua... Eu termino e enxaguo a boca com o listerine branqueador de dentes recomendado pela dentista. Termino... Saio do banheiro e me deparo com um gato preto sentado no sofá, dentro de casa.</h1>
+    <button>Adotar o gato</button> <button>Tirar o gato de casa</button>
+  </div>
+  <div class="cooking" id="cooking">
+    <h1>Entro na cozinha e esquento a àgua para preparar um café, de todo modo, modesto. Penso em colocar açúcar.</h1>
+    <button>Colocar açúcar</button><button >Colocar sal?</button>
   </div>
   <script>
   var div = document.getElementById('fdiv');
@@ -199,6 +263,45 @@ h1 {
     }
     else {
       bath.style.display = 'none'
+      display = 1;
+    }
+  }
+  var door = document.getElementById('porta');
+  var display = 0;
+  
+  function theDoor() {
+    if (display == 1) {
+      door.style.display = 'block'
+      display = 0;
+    }
+    else {
+      door.style.display = 'none'
+      display = 1;
+    }
+  }
+  var teeth = document.getElementById('teeth');
+  var display = 0;
+  
+  function brush() {
+    if (display == 1) {
+      teeth.style.display = 'block'
+      display = 0;
+    }
+    else {
+      teeth.style.display = 'none'
+      display = 1;
+    }
+  }
+  var cook = document.getElementById('cooking');
+  var display = 0;
+  
+  function cozinha() {
+    if (display == 1) {
+      cook.style.display = 'block'
+      display = 0;
+    }
+    else {
+      cook.style.display = 'none'
       display = 1;
     }
   }
