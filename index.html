@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bandersnatch</title>
+</head>
+<style>
+body, html {
+  
+}
+h1 {
+  font-size:15px;
+  text-align:justify;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  padding-top:30px;
+}
+  .fdiv {
+    text-align: center;
+    background-color:#AD1111;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: white;
+    height: 100vh;
+  }
+  .gdiv {
+    text-align: center;
+    background-color:#AD1111;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: white;
+    height: 100vh;
+  }
+  .ddiv {
+    text-align: center;
+    background-color:#F8D400;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: white;
+    height: 100vh;
+  }
+  
+  .goaway {
+    text-align: center;
+    background-color:rgba(34, 127, 44, 1);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: white;
+    height: 100vh;
+  }
+  .bath {
+    text-align: center;
+    background-color:#00A3B8;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: white;
+    height: 100vh;
+  }
+  button {
+    margin-right: 30px;
+    margin-left: 30px;
+    background-color: #B0FF00;
+    padding: 7px;
+    margin-top:40px;
+  }
+</style>
+<body>
+  <h1>Eu acordo às 05:34 da madrugada. O céu ainda está escuro. </h1>
+  <button onclick="opendiv()">Levantar</button>
+  <button style="float:right;" onclick="opendiV()">Dormir...</button>
+  
+  <div class="fdiv" id="fdiv">
+    <h1>Eu levanto da cama e um fantasma em cima do teto começa a observar meus movimentos. Tenho curiosidade em saber o nome do fantasma.</h1>
+    <button onclick="opendIv()">Perguntar</button> 
+    <button style="float:right;" onclick="embora()">Mandar ele embora</button>
+  </div>
+  <div class="gdiv" id="gdiv"> 
+  <h1>Eu continuo dormindo... Dormindo... Tenho um pesadelo...Zzz... O homem vestido de fantasia de coelho está me perseguindo e me fazendo de marionete com as suas mãos. E de repente levo um golpe na cabeça em meu próprio sonho. Sangro, preciso ir a um hospital. Mas isso é um sonho... O que eu faço? Minha cabeça está sangrando. Acordo em um grande susto. Penso em ir ao banheiro ou para a cozinha comer algo.</h1>
+  <button onclick="aOne()">Ir ao banheiro</button> <button>Ir a cozinha</button>
+  </div>
+  <div class="ddiv" id="ddiv">
+    <h1>Eu pergunto pelo nome do fantasma. E ele me diz ser um tal de Ghost. A sua voz é rouca e assustadora ao mesmo tempo.</h1>
+  </div>
+  <div class="goaway" id="goaway">
+    <h1>O fantasma desaparece. Penso em fazer um café ou um chá para relaxar melhor.</h1>
+  </div>
+  <div class="bath" id="bath">
+    <h1>Entro no banheiro. Encontro a minha escova e meu listerine. Penso em escovar meus dentes, mas alguém começa a bater violentamente na porta.</h1>
+    <button >Atender a porta</button> <button>Escovar os dentes</button>
+  </div>
+  <script>
+  var div = document.getElementById('fdiv');
+  var display = 0;
+  
+  function opendiv() {
+    if (display == 1) {
+      div.style.display = 'block'
+      display = 0;
+    }
+    else {
+      div.style.display = 'none'
+      display = 1;
+    }
+  }
+  var divg = document.getElementById('gdiv');
+  var display = 0;
+  
+  function opendiV() {
+    if (display == 1) {
+      divg.style.display = 'block'
+      display = 0;
+    }
+    else {
+      divg.style.display = 'none'
+      display = 1;
+    }
+  }
+  var di = document.getElementById('ddiv');
+  var display = 0;
+  
+  function opendIv() {
+    if (display == 1) {
+      di.style.display = 'block'
+      display = 0;
+    }
+    else {
+      di.style.display = 'none'
+      display = 1;
+    }
+  }
+  var leave = document.getElementById('goaway');
+  var display = 0;
+  
+  function embora() {
+    if (display == 1) {
+      leave.style.display = 'block'
+      display = 0;
+    }
+    else {
+      leave.style.display = 'none'
+      display = 1;
+    }
+  }
+  var bath = document.getElementById('bath');
+  var display = 0;
+  
+  function aOne() {
+    if (display == 1) {
+      bath.style.display = 'block'
+      display = 0;
+    }
+    else {
+      bath.style.display = 'none'
+      display = 1;
+    }
+  }
+  </script>
+</body>
+</html>
