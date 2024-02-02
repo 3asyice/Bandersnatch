@@ -188,7 +188,7 @@ h1 {
     position: fixed;
     color: white;
     height: 100vh;
-    background-image: url(https://www.picgifs.com/food-and-drinks/food-and-drinks/sugar/food-and-drinks-sugar-031515.gif);
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fspoonuniversity.com%2Fwp-content%2Fuploads%2F2015%2F07%2Fanigif_enhanced-19737-1400112478-17.gif&f=1&nofb=1&ipt=d32d8233e36ac441e82d195bd6948c2bcbc5c6c64064d571fb5e30ea6a197465&ipo=images);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -454,6 +454,84 @@ h1 {
     background-size: absolute;
     background-size: cover;
   }
+  .aceitar {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: red;
+    height: 100vh;
+  }
+  .rejeitar {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: red;
+    height: 100vh;
+  }
+  .entrarnaporta {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: red;
+    height: 100vh;
+  }
+  .dentro-in {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: red;
+    height: 100vh;
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipart-library.com%2Fimages%2F6irok685T.gif&f=1&nofb=1&ipt=cadc61f2660d3b4176a8c6f7cbc8294e5918cfb6336ff22efdb7c10e2a52c72b&ipo=images);
+    background-position: center center;
+    background-size: absolute;
+    background-size: cover;
+  }
+  .ajuda {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: red;
+    height: 100vh;
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fvectors%2Fman-lying-back-vector-id1003195854%3Fk%3D6%26m%3D1003195854%26s%3D612x612%26w%3D0%26h%3DJE56_5e_XW6zAFmXLOAqKVeNMVw75yVLjiVuwfkHJWU%3D&f=1&nofb=1&ipt=00024a6c4fcd2cf1fe77e272cbe421c6f217c68171fdd898d21403aa59e3804a&ipo=images);
+    background-position: center center;
+  }
+  .drinkcoffee {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: red;
+    height: 100vh;
+  }
   button {
     margin-right: 30px;
     margin-left: 30px;
@@ -462,14 +540,7 @@ h1 {
     margin-top:40px;
     border-radius: 20px;
   }
-  button:hover {
-    margin-right: 30px;
-    margin-left: 30px;
-    background-color: #0FA8E2;
-    padding: 7px;
-    margin-top:40px;
-    border-radius: 20px;
-  }
+  
 </style>
 <body>
   <h1>Eu acordo às 05:34 da madrugada. O céu ainda está escuro. </h1>
@@ -511,10 +582,11 @@ h1 {
   </div>
   <div class="salt" id="salt">
     <h1>Mas que porra é essa? Eu coloquei sal na desgraça do meu café. Por que Deus? Eu estraguei minha droga de café. Agora está amargo. O que eu faço com esse café? </h1>
-    <button>Beber o café</button><button onclick="cafe()">Jogar fora</button>
+    <button onclick="drinkCoffee()">Beber o café</button><button onclick="cafe()">Jogar fora</button>
   </div>
   <div class="sugar" id="sugar">
-    <h1>O café ficou mais saboroso do que eu imaginei que ficaria. Uma delícia. Esse café vai fazer meu dia melhorar muito. Vou ter disposição para fazer qualquer coisa.</h1>
+    <h1>O café ficou mais saboroso do que eu imaginei que ficaria. Uma delícia. Esse café vai fazer meu dia melhorar muito. Vou ter disposição para fazer qualquer coisa. Vou para o segundo gole, mas começo a me engasgar com o café. Meu rosto fica com uma coloração azul... Saio de casa e me ajoelho na rua, tento pedir socorro.</h1>
+    <button onclick="inside()">Voltar para dentro</button><button onclick="help()">Pedir ajuda</button>
   </div>
   <div class="fantasma" id="fantasma">
     <h1>O fantasma me respondeu em susurros: "Do outro lado é frio e escuro desde que eu morri atropelado por um caminhão e cheguei aqui do outro lado da vida. Eu faria qualquer coisa para estar do lado dos vivos. Será que posso te possuir?"</h1>
@@ -566,7 +638,8 @@ h1 {
  <button>Ignorar sua existência</button>
   </div>
   <div class="sayHi" id="sayHi">
-    <h1>Eu a cumprimentei.. mas minha voz quase não saiu de tão baixinha que era, parecia que eu estava em choque ou, com o rosto de expressão de inacreditável. Ela era tão popular, o pessoal do 9° ano seguia ela para todos os cantos da escola, eram seus seguidores fiéis.</h1>
+    <h1>Eu a cumprimentei.. mas minha voz quase não saiu de tão baixinha que era, parecia que eu estava em choque ou, com o rosto de expressão de inacreditável. Ela era tão popular, o pessoal do 9° ano seguia ela para todos os cantos da escola, eram seus seguidores fiéis. A Pamela me convidou para passar pela casa dela hoje de noite.</h1>
+    <button onclick="accept()">Aceitar</button><button onclick="reject()">Recusar</button>
     
   </div>
   <div class="working" id="working">
@@ -582,6 +655,27 @@ h1 {
   </div>
   <div class="fugir" id="fugir">
     <h1>Eu tento escapar pelas escadas do prédio, porém a polícia estava subindo pelas escadas. Não quis arriscar usar o elevador. Subi as escadas até o último andar... A cobertura do prédio. Fiquei uns 10 minutos na cobertura, até os policiais chegarem e me cercarem... Não tinha como escapar e nem fugir. Me joguei da cobertura. Senti um frio na barriga naqueles segundos de queda até o momento em que, tragicamente, chego ao chão.</h1>
+  </div>
+  <div class="aceitar" id="aceitar">
+    <h1>Aceitei o convite. Fui visitar ela de madrugada, para a sua grande surpresa. O olhar da Pamela foi de espanto quando me viu às 2:43 da madrugada em frente de sua porta. Ela me convidou para entrar.</h1>
+    <button onclick="enterdoor()">Entrar</button><button>Derrubar a porta?</button>
+  </div>
+  <div class="rejeitar" id="rejeitar">
+    <h1>Não consegui aceitar o convite, porque senti um desconforto em tentar socializar. Eu fazia parte do grupo de pessoas antissociais do colégio, era raro de socializar com os populares.</h1>
+  </div>
+  <div class="entrarnaporta" id="entrarnaporta">
+    <h1>Eu entro pela porta. Nós ficamos horas conversando sobre assuntos interessantes. Eu puxei um assunto sobre multiversos e ela puxou assuntos sobre o futuro. Nada aconteceu de mais. Continuei sendo virgem. Começou a ficar tarde e ela me pediu para que eu me retirasse. </h1> 
+    <button>Sair pela porta</button> <button>Pular a janela</button>
+  </div>
+  <div class="dentro-in" id="dentro-in">
+    <h1>Tento voltar para dentro de casa, mas começo a ficar sem ar. Consigo chegar até a mesa, lá eu vejo que não foi um afogamento, mas sim tomei veneno para rato que estava guardado no pote de açúcar. De um momento de fraqueza, deitei no chão. Admirei o teto de casa... Até que meus olhos ficaram cansados e não consegui mais mantê-los abertos. Tudo escureceu.</h1>
+  </div>
+  <div class="ajuda" id="ajuda">
+    <h1>Vejo um carro vindo em alta velocidade. Penso em pedir ajuda para o motorista, mas ele ignorou meu pedido de ajuda, deve ter pensado que eu fosse um mendigo ou algo parecido. Alguns minutos depois uma mulher chegou perto, ela me observou e tentou falar comigo, mas não ouvi uma palavra da boca dela. Aos poucos as pessoas chegavam e fizeram uma roda ao meu redor. Vários curiosos só queriam ver ou tirar fotos e, não ajudavam. Agonizei de dor, gritei de sofrimento, até perder a consciência... E tudo ficou escuro.</h1>
+  </div>
+  <div class="drinkcoffee" id="drinkcoffee">
+    <h1>Dou um gole no café. O que me surpreendeu muito, foi o café estar doce e não amargo. Olhei para o pote de sal e, na verdade, era açúcar. Olhei para dentro do pote de açúcar. Não tinha açúcar dentro do pote de açúcar, mas tinha um veneno de rato, talvez eu tenha mudado os potes. Acidentes acontecem. </h1>
+    <button>Jogar veneno fora</button><button>Ligar para o médico</button>
   </div>
   <script>
   var div = document.getElementById('fdiv');
@@ -935,6 +1029,84 @@ h1 {
       display = 1;
     }
   }
+  var a2 = document.getElementById('aceitar');
+  var display = 0;
+  
+  function accept() {
+    if (display == 1) {
+      a2.style.display = 'block'
+      display = 0;
+    }
+    else {
+      a2.style.display = 'none'
+      display = 1;
+    }
+  }
+    var a3 = document.getElementById('rejeitar');
+    var display = 0;
+  
+    function reject() {
+      if (display == 1) {
+        a3.style.display = 'block'
+        display = 0;
+      }
+      else {
+        a3.style.display = 'none'
+        display = 1;
+      }
+    }
+    var a4 = document.getElementById('entrarnaporta');
+    var display = 0;
+    
+    function enterdoor() {
+      if (display == 1) {
+        a4.style.display = 'block'
+        display = 0;
+      }
+      else {
+        a4.style.display = 'none'
+        display = 1;
+      }
+    }
+    var a5 = document.getElementById('dentro-in');
+    var display = 0;
+    
+    function inside() {
+      if (display == 1) {
+        a5.style.display = 'block'
+        display = 0;
+      }
+      else {
+        a5.style.display = 'none'
+        display = 1;
+      }
+    }
+    var a6 = document.getElementById('ajuda');
+    var display = 0;
+    
+    function help() {
+      if (display == 1) {
+        a6.style.display = 'block'
+        display = 0;
+      }
+      else {
+        a6.style.display = 'none'
+        display = 1;
+      }
+    }
+    var a7 = document.getElementById('drinkcoffee');
+    var display = 0;
+    
+    function drinkCoffee() {
+      if (display == 1) {
+        a7.style.display = 'block'
+        display = 0;
+      }
+      else {
+        a7.style.display = 'none'
+        display = 1;
+      }
+    }
   </script>
 </body>
 </html>
