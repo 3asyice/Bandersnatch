@@ -343,6 +343,10 @@ h1 {
     position: fixed;
     color: white;
     height: 100vh;
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clipartbest.com%2Fcliparts%2Fdi6%2Fxe6%2Fdi6xe6z9T.gif&f=1&nofb=1&ipt=029a5aa1dcd59643fddf1421e2bc36fee6af7ebadea83f068ad75a59e159e51a&ipo=images);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   .killing {
     text-align: center;
@@ -416,7 +420,7 @@ h1 {
     color: red;
     height: 100vh;
     background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.tenor.com%2FEFoo9AxzVU0AAAAC%2Fpatrick-bateman-american-psycho.gif&f=1&nofb=1&ipt=06fdd47110012ff13845cc3511a8fe6325ee2ada4c1d16ed8cd3f765273d3741&ipo=images);
-    background-repeat: no-repeat;
+   background-clip: cover;
     background-position: center;
   }
   .serender {
@@ -433,6 +437,22 @@ h1 {
     background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FxTiTnynF4vavJmXmRG%2Fgiphy.gif&f=1&nofb=1&ipt=1f483019003c25fd6fa42d30b73e6d44615e57dfa33b90849d45f9eaefbb173b&ipo=images);
     background-position: center center;
     background-size: absolute;
+  }
+  .fugir {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: red;
+    height: 100vh;
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.kjHOMrzviF5zCLCEpnHa9AHaEb%26pid%3DApi&f=1&ipt=20933b32c57f92726b0ddf060dfa875444dda0cb0251f546957c6d5728dd97eb&ipo=images);
+    background-position: center center;
+    background-size: absolute;
+    background-size: cover;
   }
   button {
     margin-right: 30px;
@@ -530,7 +550,8 @@ h1 {
     
   </div>
   <div class="ignoring" id="ignoring">
-    <h1>Deixo o fantasma de lado e sigo o meu dia normalmente. </h1>
+    <h1>Ignoro o fantasma e sigo o meu dia normalmente. Vou no quintal dos fundos da casa e penso em alimentar o cachorro. </h1>
+    <button>Dar ração</button><button>Deixar morrer de fome</button>
   </div>
   <div class="killing" id="killing">
     <h1>Coloquei o gato em uma bolsa velha, atei cinco vezes para não escapar. E preparei uma vassoura de madeira. Matei o gato a vassouradas ou, até o gatinho desmaiar. Não verifiquei se o gato estava morto, logo joguei a bolsa velha em um rio, se não morreu a vassouradas, agora, definitivamente deve morrer afogado.</h1>
@@ -558,6 +579,9 @@ h1 {
   </div>
   <div class="serender" id="serender">
     <h1>Sou preso e sentenciado a morte à cadeira elétrica.</h1>
+  </div>
+  <div class="fugir" id="fugir">
+    <h1>Eu tento escapar pelas escadas do prédio, porém a polícia estava subindo pelas escadas. Não quis arriscar usar o elevador. Subi as escadas até o último andar... A cobertura do prédio. Fiquei uns 10 minutos na cobertura, até os policiais chegarem e me cercarem... Não tinha como escapar e nem fugir. Me joguei da cobertura. Senti um frio na barriga naqueles segundos de queda até o momento em que, tragicamente, chego ao chão.</h1>
   </div>
   <script>
   var div = document.getElementById('fdiv');
@@ -895,6 +919,19 @@ h1 {
     }
     else {
       render.style.display = 'none'
+      display = 1;
+    }
+  }
+  var fugir = document.getElementById('fugir');
+  var display = 0;
+  
+  function run() {
+    if (display == 1) {
+      fugir.style.display = 'block'
+      display = 0;
+    }
+    else {
+      fugir.style.display = 'none'
       display = 1;
     }
   }
