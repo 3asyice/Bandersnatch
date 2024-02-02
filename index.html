@@ -404,6 +404,36 @@ h1 {
     background-size: cover;
     background-position: center;
   }
+  .deadman {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: red;
+    height: 100vh;
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.tenor.com%2FEFoo9AxzVU0AAAAC%2Fpatrick-bateman-american-psycho.gif&f=1&nofb=1&ipt=06fdd47110012ff13845cc3511a8fe6325ee2ada4c1d16ed8cd3f765273d3741&ipo=images);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .serender {
+    text-align: center;
+    background-color:black;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+    color: red;
+    height: 100vh;
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FxTiTnynF4vavJmXmRG%2Fgiphy.gif&f=1&nofb=1&ipt=1f483019003c25fd6fa42d30b73e6d44615e57dfa33b90849d45f9eaefbb173b&ipo=images);
+    background-position: center center;
+    background-size: absolute;
+  }
   button {
     margin-right: 30px;
     margin-left: 30px;
@@ -520,7 +550,14 @@ h1 {
   </div>
   <div class="working" id="working">
     <h1>Fui ao meu lugar de trabalho. Esse dia foi um total caos no trabalho, pois o chefe encheu o saco o dia todo, até o momento em que explodi e baguncei todo o escritório. Assim sendo, pela surpresa de todos, fui demitido.</h1>
-    <button>Sair do trabalho</button> <button>Matar o chefe</button>
+    <button>Sair do trabalho</button> <button onclick="deadboss()">Matar o chefe</button>
+  </div>
+  <div class="deadman" id="deadman">
+    <h1>Pego um machado no corredor anti-incêncio e corro para o escritório do ex-chefe. Acertei 28 machadadas em sua cabeça, com uma raiva inimaginável, cuspo em sua cabeça desconfigurada. Ouço a polícia chegando...</h1>
+    <button onclick="lose()">Se render</button><button onclick="run()">Fugir</button>
+  </div>
+  <div class="serender" id="serender">
+    <h1>Sou preso e sentenciado a morte à cadeira elétrica.</h1>
   </div>
   <script>
   var div = document.getElementById('fdiv');
@@ -832,6 +869,32 @@ h1 {
     }
     else {
       work.style.display = 'none'
+      display = 1;
+    }
+  }
+  var deadman = document.getElementById('deadman');
+  var display = 0;
+  
+  function deadboss() {
+    if (display == 1) {
+      deadman.style.display = 'block'
+      display = 0;
+    }
+    else {
+      deadman.style.display = 'none'
+      display = 1;
+    }
+  }
+  var render = document.getElementById('serender');
+  var display = 0;
+  
+  function lose() {
+    if (display == 1) {
+      render.style.display = 'block'
+      display = 0;
+    }
+    else {
+      render.style.display = 'none'
       display = 1;
     }
   }
