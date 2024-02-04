@@ -1,1115 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="shortcut icon" href="https://styles.redditmedia.com/t5_teck1/styles/communityIcon_j8zoza1n4l921.jpg?format=pjpg&s=47f5518e6fb5d3606f95350a4cf03ea46dbd5feb" title="icon" type="image/x-icon" />
-  <title>Bandersnatch</title>
+  <title>Bandersnatch Game</title>
+  <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="https://styles.redditmedia.com/t5_teck1/styles/communityIcon_j8zoza1n4l921.jpg?format=pjpg&s=47f5518e6fb5d3606f95350a4cf03ea46dbd5feb" title="icon" type="image/x-icon" />
 </head>
 <style>
-body, html {
-  color:white;
-  background-color: none;
-  background-image: url(https://i.icanvas.com/JCR32?d=2&sh=v&p=1&bg=g);
-  background-size: absolute;
-  background-repeat: no-repeat;
-  
-  
-  
-}
-h1 {
-  font-size:15px;
-  text-align:justify;
+  body,
+  html {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    height: 100%;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    background-image: url(https://cdn.wallpapersafari.com/11/75/in8I9a.jpg);
+    background-size: cover;
+    background-position: center;
+
+    /* Adicionando transição suave */
+  }
+
+  div,
+  {
   margin-left: 30px;
   margin-right: 30px;
-  padding:20px;
-  border-radius:20px;
-  border:1px solid yellow;
-  font-family: 'Times New Roman', Times, serif;
-  margin-top:30px;
-  background-color:rgba(255, 255, 255, 0.5);
-  color:#000000;
+  height: 100%;
   
-}
-  .fdiv {
+  }
+
+  .container {
     text-align: center;
-    background-color:#FFFFFF;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: red;
-    height: 100vh;
-    background-image: url(https://i.gifer.com/origin/c3/c3e43644ce66e4671eebc6fdd58a843e.gif);
-    background-repeat: no-repeat
-    
+    height: 100%;
     
   }
-  .gdiv {
-    text-align: center;
-    background-color:#AD1111;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: white;
-    height: 100vh;
-    background-image: url(https://64.media.tumblr.com/a1a010faec5c26158712b04b50b215dd/tumblr_norjuh49Yt1trun9ro1_540.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .ddiv {
-    text-align: center;
-    background-color:#FFFFFF;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: black;
-    height: 100vh;
-    background-image: url(https://media.giphy.com/media/etYZDbzfnrsvm/giphy.gif);
-    background-repeat: no-repeat;
-    
-  }
-  
-  .goaway {
-    text-align: center;
-    background-color:#FFFFFF;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: black;
-    height: 100vh;
-    background-image: url(https://i.pinimg.com/originals/99/37/30/993730e1d3019ac8611e2401b63fbc16.gif);
-    background-position: center;
-    background-repeat: no-repeat;
-    
-  }
-  .bath {
-    text-align: center;
-    background-color:#00A3B8;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: white;
-    height: 100vh;
-    background-image: url(https://media0.giphy.com/media/3xqh9FxO2PpiU/200w.gif?cid=6c09b952tlueub6bp8lwwwnylyryn3j6dbo8stdicsjhwsy4&ep=v1_gifs_search&rid=200w.gif&ct=g);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    
-  }
-  .porta {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: white;
-    height: 100vh;
-    background-image: url(https://media0.giphy.com/media/l378znZcUM7b6VDyM/200w.gif?cid=82a1493bd0xt8cwvztewdul2mccz6mdw81u1ocbsox0vygbj&ep=v1_gifs_related&rid=200w.gif&ct=g);
-    background-position: absolute;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .teeth {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: red;
-    height: 100vh;
-    background-image: url(https://ugokawaii.com/wp-content/uploads/2023/05/brushing.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .cooking {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: white;
-    height: 100vh;
-    background-image: url(https://i.pinimg.com/originals/5f/89/98/5f8998c032275d272b0db34991b87fd6.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .salt {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: white;
-    height: 100vh;
-    background-image: url(https://media0.giphy.com/media/7lKrHZoJY3eXlzdUMZ/200w.gif?cid=82a1493b0lztdiivm6y974dey1ue27iq1usc61p75rynzs0n&ep=v1_gifs_related&rid=200w.gif&ct=g);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .sugar {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: white;
-    height: 100vh;
-    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fspoonuniversity.com%2Fwp-content%2Fuploads%2F2015%2F07%2Fanigif_enhanced-19737-1400112478-17.gif&f=1&nofb=1&ipt=d32d8233e36ac441e82d195bd6948c2bcbc5c6c64064d571fb5e30ea6a197465&ipo=images);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .fantasma {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: white;
-    height: 100vh;
-    background-image: url(https://usagif.com/wp-content/uploads/2022/hqgif/ghost-93-two-coloured-ghost-friends.gif);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .yeah {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: red;
-    height: 100vh;
-    background-image: url(https://bestanimations.com/media/scary-halloween/1105686778haloween-scary-ghost-3-3.gif);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-  .scare {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: white;
-    height: 100vh;
-    background-image: url(https://media3.giphy.com/media/khLv6cbb0VoedBsiaF/giphy.gif?cid=790b761130p8afzvusvsaeju3mbsxzt6w260hgip1se4cu0k&ep=v1_gifs_search&rid=giphy.gif&ct=g);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .darsal {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: white;
-    height: 100vh;
-    background-image: url(https://media.tenor.com/SV2oZKFhUhwAAAAM/salt-bae-monalisa.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .coffee {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: white;
-    height: 100vh;
-    background-image: url(https://media1.tenor.com/m/An1nVuhkVU8AAAAC/hot-coffee-pixel.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .faltar {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: white;
-    height: 100vh;
-    background-image: url(https://wallpaperaccess.com/full/8351232.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .boss {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: white;
-    height: 100vh;
-    background-image: url(https://www.animatedimages.org/data/media/325/animated-telephone-image-0081.gif);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .gatin {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: white;
-    height: 100vh;
-    background-image: url(https://media1.giphy.com/media/3oEjHFHaBKjH2lojSg/giphy.gif?cid=6c09b9521vc0vb09ka3ipxgurve8p3l0hsjk00op6m6sk0sd&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .sayHi {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: white;
-    height: 100vh;
-  }
-  .ignoring {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: white;
-    height: 100vh;
-    background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.clipartbest.com%2Fcliparts%2Fdi6%2Fxe6%2Fdi6xe6z9T.gif&f=1&nofb=1&ipt=029a5aa1dcd59643fddf1421e2bc36fee6af7ebadea83f068ad75a59e159e51a&ipo=images);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .killing {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: white;
-    height: 100vh;
-    background-image: url(https://render.fineartamerica.com/images/images-profile-flow/400/images/artworkimages/mediumlarge/2/dead-cat-oil-on-canvas50-x-61-cm-theodore-gericault-1791-1824.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .staying {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: white;
-    height: 100vh;
-    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages-wixmp-ed30a86b8c4ca887773594c2.wixmp.com%2Fi%2Fbe7487b8-7211-4627-997b-4c3b42d64bda%2Fd81p7uv-31b4175a-2d80-4399-bb1e-8aa6ae692f01.png&f=1&nofb=1&ipt=202110e056c1ede6e2f938d6bf37019011245fa56fc2781a086a48e5744923d0&ipo=images);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .schooling {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: red;
-    height: 100vh;
-  }
-  .working {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: red;
-    height: 100vh;
-    background-image: url(https://usagif.com/wp-content/uploads/gif-funny-work-23.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  .deadman {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: red;
-    height: 100vh;
-    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.tenor.com%2FEFoo9AxzVU0AAAAC%2Fpatrick-bateman-american-psycho.gif&f=1&nofb=1&ipt=06fdd47110012ff13845cc3511a8fe6325ee2ada4c1d16ed8cd3f765273d3741&ipo=images);
-   background-clip: cover;
-    background-position: center;
-  }
-  .serender {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: red;
-    height: 100vh;
-    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FxTiTnynF4vavJmXmRG%2Fgiphy.gif&f=1&nofb=1&ipt=1f483019003c25fd6fa42d30b73e6d44615e57dfa33b90849d45f9eaefbb173b&ipo=images);
-    background-position: center center;
-    background-size: absolute;
-  }
-  .fugir {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: red;
-    height: 100vh;
-    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.kjHOMrzviF5zCLCEpnHa9AHaEb%26pid%3DApi&f=1&ipt=20933b32c57f92726b0ddf060dfa875444dda0cb0251f546957c6d5728dd97eb&ipo=images);
-    background-position: center center;
-    background-size: absolute;
-    background-size: cover;
-  }
-  .aceitar {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: red;
-    height: 100vh;
-    background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fmedia.giphy.com%2Fmedia%2FQaGpdyYkfzupy%2Fgiphy.gif&f=1&nofb=1&ipt=48450bf24dfc6dd22e05f2ef61d39ba96a56fb8bdd8ab9e75e76c9d20c775777&ipo=images);
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .rejeitar {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: red;
-    height: 100vh;
-  }
-  .entrarnaporta {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: red;
-    height: 100vh;
-  }
-  .dentro-in {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: red;
-    height: 100vh;
-    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipart-library.com%2Fimages%2F6irok685T.gif&f=1&nofb=1&ipt=cadc61f2660d3b4176a8c6f7cbc8294e5918cfb6336ff22efdb7c10e2a52c72b&ipo=images);
-    background-position: center center;
-    background-size: absolute;
-    background-size: cover;
-  }
-  .ajuda {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: red;
-    height: 100vh;
-    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fvectors%2Fman-lying-back-vector-id1003195854%3Fk%3D6%26m%3D1003195854%26s%3D612x612%26w%3D0%26h%3DJE56_5e_XW6zAFmXLOAqKVeNMVw75yVLjiVuwfkHJWU%3D&f=1&nofb=1&ipt=00024a6c4fcd2cf1fe77e272cbe421c6f217c68171fdd898d21403aa59e3804a&ipo=images);
-    background-position: center center;
-  }
-  .drinkcoffee {
-    text-align: center;
-    background-color:black;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    position: fixed;
-    color: red;
-    height: 100vh;
-  }
-  button {
-    margin-right: 30px;
+
+
+  #story {
+    text-align: justify;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border: 1px solid rgba(255, 247, 0, 1);
+    border-radius: 10px;
+    font-weight: bolder;
     margin-left: 30px;
-    background-color: #B0FF00;
-    padding: 7px;
-    margin-top:40px;
+    margin-right: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  #choices button {
+    font-size: 14px;
+    margin: 5px;
+    text-align: justify;
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgba(122, 122, 122, 1);
     border-radius: 20px;
   }
-  
+
+   button:hover {
+    font-size: 14px;
+    margin: 5px;
+    text-align: justify;
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgba(0, 150, 255, 1);
+    border-radius: 20px;
+  }
 </style>
+
 <body>
-  <h1>Eu acordo às 05:34 da madrugada. O céu ainda está escuro. </h1>
-  <button onclick="opendiv()">Levantar</button>
-  <button style="float:right;" onclick="opendiV()">Dormir...</button>
-  
-  <div class="fdiv" id="fdiv">
-    <h1>Eu levanto da cama e um fantasma em cima do teto começa a observar meus movimentos. Tenho curiosidade em saber o nome do fantasma.</h1>
-    <button onclick="opendIv()">Perguntar</button> 
-    <button style="float:right;" onclick="embora()">Mandar embora</button>
+  <div class="container">
+    <div id="story">Eu desperto às 5:34 da manhã, quando até o Sol ainda está bocejando.</div>
+    <div id="choices">
+      <button onclick="makeChoice(1)">LEVANTAR</button>
+      <button onclick="makeChoice(2)">DORMIR</button>
+    </div>
   </div>
-  <div class="gdiv" id="gdiv"> 
-  <h1>Eu continuo dormindo... Dormindo... Tenho um pesadelo... Zzz... O homem vestido de fantasia de coelho está me perseguindo e me fazendo de marionete com as suas mãos. E de repente levo um golpe na cabeça em meu próprio sonho. Sangro, preciso ir a um hospital. Mas isso é um sonho... O que eu faço? Minha cabeça está sangrando. Acordo em um grande susto. Penso em ir ao banheiro ou para a cozinha comer algo.</h1>
-  <button onclick="aOne()">Ir ao banheiro</button> <button onclick="cozinha()">Ir a cozinha</button>
-  </div>
-  <div class="ddiv" id="ddiv">
-    <h1>Eu pergunto pelo nome do fantasma. E ele me diz ser um tal de Ghost. A sua voz é rouca e assustadora ao mesmo tempo. Quero perguntar como é estar do outro lado, mas estou com medo da resposta.</h1>
-    <button onclick="ghost()">Perguntar ao Ghost</button><button onclick="ignore()">Ignorar o Ghost</button>
-  </div>
-  <div class="goaway" id="goaway">
-    <h1>O fantasma desaparece. Penso em voltar a dormir.</h1>
-    <button onclick="()">Voltar a dormir</button> <button>Ficar acordado</button>
-  </div>
-  <div class="bath" id="bath">
-    <h1>Entro no banheiro. Encontro a minha escova e meu listerine. Penso em escovar meus dentes, mas alguém começa a bater violentamente na porta.</h1>
-    <button onclick="theDoor()">Atender a porta</button> <button onclick="brush()">Escovar os dentes</button>
-  </div>
-  <div class="porta" id="porta">
-    <h1>Ao abrir a porta me deparo com um velho senhor. Nunca tinha visto ele antes. Dou uma leve olhadinha para o meu relógio de pulso e, agora, são 05:46. O velho senhor está me pedindo sal a essas horas.</h1>
-    <button onclick="emprestar()">Emprestar sal</button> <button>Fechar a porta</button>
-  </div>
-  <div class="teeth" id="teeth">
-    <h1>Meus dentes são escovados pela minha escova de dentes automática. O sabor da pasta entra em contato com o meu paladar. Sinto vontade de vomitar quando escovo a minha língua... Eu termino e enxaguo a boca com o listerine branqueador de dentes recomendado pela dentista. Termino... Saio do banheiro e me deparo com um gato preto sentado no sofá, dentro de casa.</h1>
-    <button>Adotar o gato</button> <button onclick="nocat()">Tirar o gato de casa</button>
-  </div>
-  <div class="cooking" id="cooking">
-    <h1>Entro na cozinha e esquento a àgua para preparar um café, de todo modo, modesto e refinado. Penso em colocar açúcar.</h1>
-    <button onclick="sugarDiv()">Colocar açúcar</button><button onclick="saltDiv()">Colocar sal?</button>
-  </div>
-  <div class="salt" id="salt">
-    <h1>Mas que porra é essa? Eu coloquei sal na desgraça do meu café. Por que Deus? Eu estraguei minha droga de café. Agora está amargo. O que eu faço com esse café? </h1>
-    <button onclick="drinkCoffee()">Beber o café</button><button onclick="cafe()">Jogar fora</button>
-  </div>
-  <div class="sugar" id="sugar">
-    <h1>O café ficou mais saboroso do que eu imaginei que ficaria. Uma delícia. Esse café vai fazer meu dia melhorar muito. Vou ter disposição para fazer qualquer coisa. Vou para o segundo gole, mas começo a me engasgar com o café. Meu rosto fica com uma coloração azul... Saio de casa e me ajoelho na rua, tento pedir socorro.</h1>
-    <button onclick="inside()">Voltar para dentro</button><button onclick="help()">Pedir ajuda</button>
-  </div>
-  <div class="fantasma" id="fantasma">
-    <h1>O fantasma me respondeu em susurros: "Do outro lado é frio e escuro desde que eu morri atropelado por um caminhão e cheguei aqui do outro lado da vida. Eu faria qualquer coisa para estar do lado dos vivos. Será que posso te possuir?"</h1>
-    <button onclick="yes()">Sim</button><button>Não</button>
-  </div>
-  <div class="yeah" id="yeah">
-    <h1>Sou possuído pelo fantasma, agora, não tenho mais controle de mim mesmo e, me deixo ir completamente para o outro lado da vida. Me tornando um fantasma e observando o Ghost controlando a casca do meu corpo como um boneco marionete. Tento gritar, mas tudo o que se ouve são susurros. Atravesso a porta sem precisar abrir. Isso é divertido. Vejo uma criancinha na calçada.</h1>
-    <button onclick="jumpscare()">Assustá-la</button><button>Falar com a criança</button>
-  </div>
-  <div class="scare" id="scare">
-    <h1>A pobre criancinha saiu correndo assustada. Eu flutuei até encontrar ela de novo. E possuí o corpo da criança. Assim a sua alma foi para o outro lado da vida, o lado dos mortos. Era divertido ser criança de novo, mas fiquei pensando na pobre criança que virou fantasma, agora, ela estava me assombrando, me observando, me olhando com o rosto de cãozinho triste.</h1>
-    <button>Sair do corpo</button><button onclick="stay()">Continuar no corpo</button>
-  </div>
-  <div class="darsal" id="darsal">
-    <h1>Eu coloco meio kilo de sal em um potinho e entrego para o velho senhor. Ele me olha nos olhos e agradece com um amuleto da sorte. O que me fez pensar em recusar.</h1>
-    <button>Pegar o amuleto</button><button>Recusar</button>
-  </div>
-  <div class="coffee" id="coffee">
-    <h1>Coloco o café fora. Um grande desperdício. Olho para o relógio e são 06:30. Vou em direção ao armário e coloco minha roupa de trabalho e, em seguida, coloco um pouco de perfume.</h1>
-    <button onclick="job()">Ir trabalhar</button><button onclick="miss()">Faltar o trabalho</button>
-  </div>
-  <div class="faltar" id="faltar">
-    <h1>Não estou com vontade de ir trabalhar hoje. Talvez amanhã. Hoje vou fingir que não tenho que trabalhar. A minha preguiça fala mais alto. E além do mais, aquele chefe barrigudo não valoriza seus funcionários... Devo pedir demissão em breve. Talvez eu ligue por telefone e me demita.</h1>
-    <button onclick="call()">Ligar para o chefe</button> <button>Deixar para amanhã</button>
-  </div>
-  <div class="boss" id="boss">
-    <h1>Eu ligo para o chefe: "Alô, sou eu o Frank. Eu só estou ligando porque eu quero me demitir dessa sua espelunca velha e barata. Você é o maior merda que eu já conheci em toda a minha vida! Noé. Saiba que a minha vida não depende só de puxar o saco mole do chefe, mas também de preservar a merda da minha sanidade mental. Seu otário de merda!"</h1>
-    <button>Desligar</button><button>Gritar</button>
-  </div>
-  <div class="gatin" id="gatin">
-    <h1>Eu tento pegar o gato, mas ele me arranhou quando peguei ele. Então peguei um pano e tomei o máximo de cuidado para não levar mais arranhões. Pensei em jogá-lo na pátio da vizinha.</h1>
-    <button>Jogar no pátio da vizinha</button><button onclick="killthecat()">Matar o gato</button>
-    
-  </div>
-  <div class="ignoring" id="ignoring">
-    <h1>Ignoro o fantasma e sigo o meu dia normalmente. Vou no quintal dos fundos da casa e penso em alimentar o cachorro. </h1>
-    <button>Dar ração</button><button>Deixar morrer de fome</button>
-  </div>
-  <div class="killing" id="killing">
-    <h1>Coloquei o gato em uma bolsa velha, atei cinco vezes para não escapar. E preparei uma vassoura de madeira. Matei o gato a vassouradas ou, até o gatinho desmaiar. Não verifiquei se o gato estava morto, logo joguei a bolsa velha em um rio, se não morreu a vassouradas, agora, definitivamente deve morrer afogado.</h1>
-  </div>
-  <div class="staying" id="staying">
-    <h1>Fiquei no corpo da criança... E nunca mais a devolvi seu corpo. Se passaram 10 anos depois, ainda, a criança esperava eu devolvê-la seu corpo. Mas quando tentava sair do corpo, uma força além do normal, me puxava de volta para dentro dele. Eu já tinha ficado muito tempo no corpo da criança, que a casca começou a me aceitar como seu verdadeiro hospedeiro. Em aparência, eu era um adolescente... mas na realidade, era mais velho do que isso. Tinha que ir para a escola, por obrigação.</h1>
-    <button onclick="school()">Ir para a escola</button><button>Ficar em casa</button>
-  </div>
-  <div class="schooling" id="schooling">
-    <h1>Eu havia feito alguns amigos na escola... era um grupinho de 5 pessoas. Eu tinha começado a fazer amigos pelo facebook... e foi a primeira vez que vi uma amigo do facebook na vida real... O nome dela é Paloma. Nós conversava fazia alguns meses, mas nunca haviámos se visto pessoalmente. Então ela passou por perto e me cumprimentou.</h1>
-    <button onclick="sayhi()">Cumprimentar</button>
- <button>Ignorar sua existência</button>
-  </div>
-  <div class="sayHi" id="sayHi">
-    <h1>Eu a cumprimentei.. mas minha voz quase não saiu de tão baixinha que era, parecia que eu estava em choque ou, com o rosto de expressão de inacreditável. Ela era tão popular, o pessoal do 9° ano seguia ela para todos os cantos da escola, eram seus seguidores fiéis. A Pamela me convidou para passar pela casa dela hoje de noite.</h1>
-    <button onclick="accept()">Aceitar</button><button onclick="reject()">Recusar</button>
-    
-  </div>
-  <div class="working" id="working">
-    <h1>Fui ao meu lugar de trabalho. Esse dia foi um total caos no trabalho, pois o chefe encheu o saco o dia todo, até o momento em que explodi e baguncei todo o escritório. Assim sendo, pela surpresa de todos, fui demitido.</h1>
-    <button>Sair do trabalho</button> <button onclick="deadboss()">Matar o chefe</button>
-  </div>
-  <div class="deadman" id="deadman">
-    <h1>Pego um machado no corredor anti-incêncio e corro para o escritório do ex-chefe. Acertei 28 machadadas em sua cabeça, com uma raiva inimaginável, cuspo em sua cabeça desconfigurada. Ouço a polícia chegando...</h1>
-    <button onclick="lose()">Se render</button><button onclick="run()">Fugir</button>
-  </div>
-  <div class="serender" id="serender">
-    <h1>Sou preso e sentenciado a morte à cadeira elétrica.</h1>
-  </div>
-  <div class="fugir" id="fugir">
-    <h1>Eu tento escapar pelas escadas do prédio, porém a polícia estava subindo pelas escadas. Não quis arriscar usar o elevador. Subi as escadas até o último andar... A cobertura do prédio. Fiquei uns 10 minutos na cobertura, até os policiais chegarem e me cercarem... Não tinha como escapar e nem fugir. Me joguei da cobertura. Senti um frio na barriga naqueles segundos de queda até o momento em que, tragicamente, chego ao chão.</h1>
-  </div>
-  <div class="aceitar" id="aceitar">
-    <h1>Aceitei o convite. Fui visitar ela de madrugada, para a sua grande surpresa. O olhar da Pamela foi de espanto quando me viu às 2:43 da madrugada em frente de sua porta. Ela me convidou para entrar.</h1>
-    <button onclick="enterdoor()">Entrar</button><button>Derrubar a porta?</button>
-  </div>
-  <div class="rejeitar" id="rejeitar">
-    <h1>Não consegui aceitar o convite, porque senti um desconforto em tentar socializar. Eu fazia parte do grupo de pessoas antissociais do colégio, era raro de socializar com os populares.</h1>
-  </div>
-  <div class="entrarnaporta" id="entrarnaporta">
-    <h1>Eu entro pela porta. Nós ficamos horas conversando sobre assuntos interessantes. Eu puxei um assunto sobre multiversos e ela puxou assuntos sobre o futuro. Nada aconteceu de mais. Continuei sendo virgem. Começou a ficar tarde e ela me pediu para que eu me retirasse. </h1> 
-    <button>Sair pela porta</button> <button>Pular a janela</button>
-  </div>
-  <div class="dentro-in" id="dentro-in">
-    <h1>Tento voltar para dentro de casa, mas começo a ficar sem ar. Consigo chegar até a mesa, lá eu vejo que não foi um afogamento, mas sim tomei veneno para rato que estava guardado no pote de açúcar. De um momento de fraqueza, deitei no chão. Admirei o teto de casa... Até que meus olhos ficaram cansados e não consegui mais mantê-los abertos. Tudo escureceu.</h1>
-  </div>
-  <div class="ajuda" id="ajuda">
-    <h1>Vejo um carro vindo em alta velocidade. Penso em pedir ajuda para o motorista, mas ele ignorou meu pedido de ajuda, deve ter pensado que eu fosse um mendigo ou algo parecido. Alguns minutos depois uma mulher chegou perto, ela me observou e tentou falar comigo, mas não ouvi uma palavra da boca dela. Aos poucos as pessoas chegavam e fizeram uma roda ao meu redor. Vários curiosos só queriam ver ou tirar fotos e, não ajudavam. Agonizei de dor, gritei de sofrimento, até perder a consciência... E tudo ficou escuro.</h1>
-  </div>
-  <div class="drinkcoffee" id="drinkcoffee">
-    <h1>Dou um gole no café. O que me surpreendeu muito, foi o café estar doce e não amargo. Olhei para o pote de sal e, na verdade, era açúcar. Olhei para dentro do pote de açúcar. Não tinha açúcar dentro do pote de açúcar, mas tinha um veneno de rato, talvez eu tenha mudado os potes. Acidentes acontecem. </h1>
-    <button>Jogar veneno fora</button><button>Ligar para o médico</button>
-  </div>
+  <script src="script.js"></script>
   <script>
-  var div = document.getElementById('fdiv');
-  var display = 0;
-  
-  function opendiv() {
-    if (display == 1) {
-      div.style.display = 'block'
-      display = 0;
-    }
-    else {
-      div.style.display = 'none'
-      display = 1;
-    }
-  }
-  var divg = document.getElementById('gdiv');
-  var display = 0;
-  
-  function opendiV() {
-    if (display == 1) {
-      divg.style.display = 'block'
-      display = 0;
-    }
-    else {
-      divg.style.display = 'none'
-      display = 1;
-    }
-  }
-  var di = document.getElementById('ddiv');
-  var display = 0;
-  
-  function opendIv() {
-    if (display == 1) {
-      di.style.display = 'block'
-      display = 0;
-    }
-    else {
-      di.style.display = 'none'
-      display = 1;
-    }
-  }
-  var leave = document.getElementById('goaway');
-  var display = 0;
-  
-  function embora() {
-    if (display == 1) {
-      leave.style.display = 'block'
-      display = 0;
-    }
-    else {
-      leave.style.display = 'none'
-      display = 1;
-    }
-  }
-  var bath = document.getElementById('bath');
-  var display = 0;
-  
-  function aOne() {
-    if (display == 1) {
-      bath.style.display = 'block'
-      display = 0;
-    }
-    else {
-      bath.style.display = 'none'
-      display = 1;
-    }
-  }
-  var door = document.getElementById('porta');
-  var display = 0;
-  
-  function theDoor() {
-    if (display == 1) {
-      door.style.display = 'block'
-      display = 0;
-    }
-    else {
-      door.style.display = 'none'
-      display = 1;
-    }
-  }
-  var teeth = document.getElementById('teeth');
-  var display = 0;
-  
-  function brush() {
-    if (display == 1) {
-      teeth.style.display = 'block'
-      display = 0;
-    }
-    else {
-      teeth.style.display = 'none'
-      display = 1;
-    }
-  }
-  var cook = document.getElementById('cooking');
-  var display = 0;
-  
-  function cozinha() {
-    if (display == 1) {
-      cook.style.display = 'block'
-      display = 0;
-    }
-    else {
-      cook.style.display = 'none'
-      display = 1;
-    }
-  }
-  var salt = document.getElementById('salt');
-  var display = 0;
-  
-  function saltDiv() {
-    if (display == 1) {
-      salt.style.display = 'block'
-      display = 0;
-    }
-    else {
-      salt.style.display = 'none'
-      display = 1;
-    }
-  }
-  var sugar = document.getElementById('sugar');
-  var display = 0;
-  
-  function sugarDiv() {
-    if (display == 1) {
-      sugar.style.display = 'block'
-      display = 0;
-    }
-    else {
-      sugar.style.display = 'none'
-      display = 1;
-    }
-  }
-  var ghos = document.getElementById('fantasma');
-  var display = 0;
-  
-  function ghost() {
-    if (display == 1) {
-      ghos.style.display = 'block'
-      display = 0;
-    }
-    else {
-      ghos.style.display = 'none'
-      display = 1;
-    }
-  }
-  var yeah = document.getElementById('yeah');
-  var display = 0;
-  
-  function yes() {
-    if (display == 1) {
-      yeah.style.display = 'block'
-      display = 0;
-    }
-    else {
-      yeah.style.display = 'none'
-      display = 1;
-    }
-  }
-  var scare = document.getElementById('scare');
-  var display = 0;
-  
-  function jumpscare() {
-    if (display == 1) {
-      scare.style.display = 'block'
-      display = 0;
-    }
-    else {
-      scare.style.display = 'none'
-      display = 1;
-    }
-  }
-  var sal = document.getElementById('darsal');
-  var display = 0;
-  
-  function emprestar() {
-    if (display == 1) {
-      sal.style.display = 'block'
-      display = 0;
-    }
-    else {
-      sal.style.display = 'none'
-      display = 1;
-    }
-  }
-  var cof = document.getElementById('coffee');
-  var display = 0;
-  
-  function cafe() {
-    if (display == 1) {
-      cof.style.display = 'block'
-      display = 0;
-    }
-    else {
-      cof.style.display = 'none'
-      display = 1;
-    }
-  }
-  var divmiss = document.getElementById('faltar');
-  var display = 0;
-  
-  function miss() {
-    if (display == 1) {
-      divmiss.style.display = 'block'
-      display = 0;
-    }
-    else {
-      divmiss.style.display = 'none'
-      display = 1;
-    }
-  }
-  var calling = document.getElementById('boss');
-  var display = 0;
-  
-  function call() {
-    if (display == 1) {
-      calling.style.display = 'block'
-      display = 0;
-    }
-    else {
-      calling.style.display = 'none'
-      display = 1;
-    }
-  }
-  var cat = document.getElementById('gatin');
-  var display = 0;
-  
-  function nocat() {
-    if (display == 1) {
-      cat.style.display = 'block'
-      display = 0;
-    }
-    else {
-      cat.style.display = 'none'
-      display = 1;
-    }
-  }
-  var dgaf = document.getElementById('ignoring');
-  var display = 0;
-  
-  function ignore() {
-    if (display == 1) {
-      dgaf.style.display = 'block'
-      display = 0;
-    }
-    else {
-      dgaf.style.display = 'none'
-      display = 1;
-    }
-  }
-  var kill = document.getElementById('killing');
-  var display = 0;
-  
-  function killthecat() {
-    if (display == 1) {
-      kill.style.display = 'block'
-      display = 0;
-    }
-    else {
-      kill.style.display = 'none'
-      display = 1;
-    }
-  }
-  var ficar = document.getElementById('staying');
-  var display = 0;
-  
-  function stay() {
-    if (display == 1) {
-      ficar.style.display = 'block'
-      display = 0;
-    }
-    else {
-      ficar.style.display = 'none'
-      display = 1;
-    }
-  }
-  var escola = document.getElementById('schooling');
-  var display = 0;
-  
-  function school() {
-    if (display == 1) {
-      escola.style.display = 'block'
-      display = 0;
-    }
-    else {
-      escola.style.display = 'none'
-      display = 1;
-    }
-  }
-  var hi = document.getElementById('sayHi');
-  var display = 0;
-  
-  function sayhi() {
-    if (display == 1) {
-      hi.style.display = 'block'
-      display = 0;
-    }
-    else {
-      hi.style.display = 'none'
-      display = 1;
-    }
-  }
-  var work = document.getElementById('working');
-  var display = 0;
-  
-  function job() {
-    if (display == 1) {
-      work.style.display = 'block'
-      display = 0;
-    }
-    else {
-      work.style.display = 'none'
-      display = 1;
-    }
-  }
-  var deadman = document.getElementById('deadman');
-  var display = 0;
-  
-  function deadboss() {
-    if (display == 1) {
-      deadman.style.display = 'block'
-      display = 0;
-    }
-    else {
-      deadman.style.display = 'none'
-      display = 1;
-    }
-  }
-  var render = document.getElementById('serender');
-  var display = 0;
-  
-  function lose() {
-    if (display == 1) {
-      render.style.display = 'block'
-      display = 0;
-    }
-    else {
-      render.style.display = 'none'
-      display = 1;
-    }
-  }
-  var fugir = document.getElementById('fugir');
-  var display = 0;
-  
-  function run() {
-    if (display == 1) {
-      fugir.style.display = 'block'
-      display = 0;
-    }
-    else {
-      fugir.style.display = 'none'
-      display = 1;
-    }
-  }
-  var a2 = document.getElementById('aceitar');
-  var display = 0;
-  
-  function accept() {
-    if (display == 1) {
-      a2.style.display = 'block'
-      display = 0;
-    }
-    else {
-      a2.style.display = 'none'
-      display = 1;
-    }
-  }
-    var a3 = document.getElementById('rejeitar');
-    var display = 0;
-  
-    function reject() {
-      if (display == 1) {
-        a3.style.display = 'block'
-        display = 0;
-      }
-      else {
-        a3.style.display = 'none'
-        display = 1;
+    function makeChoice(choice) {
+      var storyDiv = document.getElementById('story');
+      var choicesDiv = document.getElementById('choices');
+
+      switch (choice) {
+        case 1:
+          document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FetYZDbzfnrsvm%2Fgiphy.gif&f=1&nofb=1&ipt=35c2fce41acd618b936b1d8719b222c2f248d3214a7276c76af818cd26257031&ipo=images')";
+          storyDiv.innerHTML = "Levanto da cama e, para minha surpresa matinal, um fantasma fazendo seu número no teto. Sério, até fantasmas têm suas manhãs de ioga. Fico curioso sobre seu nome - pode ser algo como ''Casper'' ou ''Boo''?";
+          choicesDiv.innerHTML = "<button onclick='makeChoice(1.1)'>PERGUNTAR</button><button onclick='makeChoice(1.2)'>MANDAR EMBORA</button>";
+          break;
+        case 2:
+          document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg2.joyreactor.com%2Fpics%2Fpost%2Fhotel-hallway-trippy-gif-1978883.gif&f=1&nofb=1&ipt=c06397ee38c1a73c230b9b8fdfbd0b0c07806966c1aee66883727dec6b8e8890&ipo=images')";
+          storyDiv.innerHTML = "Sigo dormindo profundamente... Profundamente... Tenho um pesadelo estranho... Zzz... Um cara fantasiado de coelho me persegue, me transforma em marionete e, de repente, levo uma pancada na cabeça no meu próprio sonho. Sangue pra todo lado, preciso urgentemente de um médico! Mas, espera, isso é um sonho, certo? Acordei num pulo! Agora, a dúvida cruel: banheiro ou cozinha?";
+          choicesDiv.innerHTML = "<button onclick='makeChoice(2.1)'>BANHEIRO</button><button onclick='makeChoice(2.2)'>COZINHA</button>";
+          break;
+        case 1.1:
+          document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fd8%2F75%2F32%2Fd87532bf817b54ec2743c208ccfe5a4c.gif&f=1&nofb=1&ipt=26a722463621fe651badd2714517da1aa3d08c7cdbf001913bfc620ff1f1d3f1&ipo=images')";
+          storyDiv.innerHTML = "Decido encarar o fantasma e perguntar seu nome. Para minha surpresa (ou não), ele se chama Ghost. Que nome original para um fantasma, não é mesmo? Sua voz, uma mistura de rouquidão e assombração, ecoa pelo quarto, me deixando arrepiado. Queria muito perguntar como é a vida do outro lado, mas, sinceramente, estou com medo de ouvir a resposta e acabar me tornando seu novo colega de assombração. Melhor não arriscar, né?";
+          choicesDiv.innerHTML = "<button onclick='makeChoice(1.99)'>PERGUNTAR</button><button onclick='makeChoice(1.16)'>IGNORAR</button>";
+          break;
+        case 1.2:
+          document.body.style.backgroundImage = "url('https://example.com/background4.jpg')";
+          storyDiv.innerHTML = "O fantasma decide que sua atuação no teto já foi suficiente por hoje e desaparece. Bem, acho que é minha deixa para voltar a dormir e fingir que nada disso aconteceu. Hora de aproveitar mais alguns preciosos minutos de sono!";
+          choicesDiv.innerHTML = "<button onclick='makeChoice()'>VOLTAR A DORMIR</button><button onclick='makeChoice()'>FICAR ACORDADO</button>";
+          break;
+        case 2.1:
+          document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2F3ov9jVMVTVzs6fqGLm%2Fgiphy.gif&f=1&nofb=1&ipt=d2c102a33ef91986522cc4fb4b7ad4078b65b45780cc3193ad766e925f2baef7&ipo=images')";
+          storyDiv.innerHTML = "Entro no banheiro, prontamente me deparo com minha escova e o meu Listerine, e a ideia de uma higiene bucal perfeita surge. No entanto, antes mesmo que eu possa começar, alguém começa a bater na porta do banheiro como se estivesse em uma maratona de percussão. Prioridades, né?";
+          choicesDiv.innerHTML = "<button onclick='makeChoice(1.31)'>ATENDER</button><button onclick='makeChoice(1.32)'>ESCOVAR OS DENTES</button>";
+          break;
+        case 2.2:
+          document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Forig00.deviantart.net%2Fb7de%2Ff%2F2017%2F187%2F2%2F1%2Fcoffee_gif_by_javaleaf-dbfc7gt.gif&f=1&nofb=1&ipt=2763d429576630a161475f87d644561ef1ca8e0183c753d306ad75d3079867a7&ipo=images')";
+          storyDiv.innerHTML = "Entro na cozinha e começo a preparar um café, daqueles modestos e refinados, sabe? Penso: será que coloco açúcar?";
+          choicesDiv.innerHTML = "<button onclick='makeChoice(1.13)'>COLOCAR AÇÚCAR</button> <button onclick='makeChoice(1.17)'>COLOCAR SAL</button>";
+          break;
+        case 1.6:
+          document.body.style.backgroundImage = "url('https://example.com/background7.jpg')";
+          storyDiv.innerHTML = "Você é um humano fracassado. hahahahaha";
+          choicesDiv.innerHTML = "<button onclick='makeChoice(1.9)'>Desistir</button> <button onclick='makeChoice(1.11)'>Continuar</button>";
+          break;
+        case 1.7:
+          document.body.style.backgroundImage = "url('https://example.com/background8.jpg')";
+          storyDiv.innerHTML = "Você continua navegando e encontra uma ilha deserta. Fim da aventura!";
+          choicesDiv.innerHTML = "";
+          break;
+        case 1.8:
+          document.body.style.backgroundImage = "url('https://example.com/background9.jpg')";
+          storyDiv.innerHTML = "Você voltou para a praia. Fim da aventura!";
+          choicesDiv.innerHTML = "";
+          break;
+        case 1.99:
+          document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fc.tenor.com%2Fgd3dkWF86i0AAAAC%2Fghost.gif&f=1&nofb=1&ipt=dc1e015189af5b63b47dd25b13c5cfcf60c768f4a4aaea9f56316c76f8c4a61c&ipo=images')";
+          storyDiv.innerHTML = "O fantasma respondeu em um sussurro arrepiante: ''Do outro lado é frio e escuro desde que fui atropelado por um caminhão e vim parar aqui. Daria qualquer coisa para estar do lado dos vivos. Quer tentar uma troca? Eu te possuo, você vive no escuro, e eu desfruto da luz do dia?'' E aí, será que aceito a oferta e me torno um fantasma? Difícil decisão, afinal, ser um fantasma não é tão ruim assim, certo?";
+          choicesDiv.innerHTML = "<button onclick='makeChoice(1.12)'>SIM</button><button>NÃo</button>";
+          break;
+        case 1.12:
+          document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2Fl4pMdRYrYUKI6I2ZO%2Fgiphy.gif&f=1&nofb=1&ipt=4de0c9b7fb0d5c779b0d86eec5e6351fedb7ea7f8a76a6fd69a4401e9cd2e968&ipo=images')";
+          storyDiv.innerHTML = "Possuído pelo fantasma, agora sou apenas um espectro sem controle, enquanto o Ghost comanda meu corpo como se fosse um fantoche. Tento gritar, mas só saem suspiros assustadores. Passo pela porta sem nem precisar abri-la. Bem, pelo menos isso é conveniente! Ah, olha só, uma criancinha na calçada. Será que ela está vendo o show ou vai se assustar?";
+          choicesDiv.innerHTML = "<button onclick='makeChoice(1.51)'>ASSUSTAR</button><button>BATER PAPO</button>";
+          break;
+          case 1.51:
+            document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Ff0%2Fc2%2F64%2Ff0c264e5f18ee610c88ca829cd46f32e.gif&f=1&nofb=1&ipt=dfef7e6b26e457e3bb1ad8756d373f2fb3f15fde4fe7c8bf3aabf4e934f07c14&ipo=images')";
+          storyDiv.innerHTML = "A pobre criança saiu correndo como se tivesse visto um fantasma. Bem, na verdade, viu. Eu flutuei até ele, e numa troca rápida de almas, agora eu tinha um corpo novo e ele... bem, ele tinha passado para o outro lado, onde não há mais problemas de matemática ou alergias a amendoim. Ser criança novamente era uma delícia, até que percebi que o pobre garotinho virara um fantasma chato, me encarando com aqueles olhos de cachorro abandonado. Que troca desvantajosa! Eu só queria brincar de pega-pega, não de jogos de assombração.";
+          choicesDiv.innerHTML = "<button onclick='makeChoice(1.52)'>ESCOLA</button><button>FALTAR</button>";
+          break;
+          case 1.52:
+            document.body.style.backgroundImage = "url('')";
+          storyDiv.innerHTML = "Lá estava eu, finalmente conhecendo um amigo do Facebook na vida real. Paloma apareceu e eu, que tinha praticado meu sorriso no espelho por horas, acabei parecendo mais um emoji sorridente na vida real. Foi um encontro tão estranho que até as pombas no telhado pararam de cagar para assistir.";
+          choicesDiv.innerHTML = "<button onclick='makeChoice(1.53)'>CUMPRIMENTAR</button><button>IGNORAR</button>";
+          break;
+          case 1.53:
+            document.body.style.backgroundImage = "url('')";
+          storyDiv.innerHTML = "Cumprimentei Paloma com uma voz de mosquito com laringite, parecendo mais surpreso que uma banana sendo descascada por um macaco. Ela era tão popular que até os professores pediam autógrafos. E agora, Pamela me convidou para passar pela casa dela à noite. Será que é para discutirmos táticas de sobrevivência social ou só para assistir a uma maratona de reality shows de culinária com comentários sarcásticos?";
+          choicesDiv.innerHTML = "<button onclick='makeChoice(1.54)'>ACEITAR</button><button>RECUSAR</button>";
+          break;
+          case 1.54:
+            document.body.style.backgroundImage = "url('')";
+          storyDiv.innerHTML = "Lá fui eu, seguindo a Pamela em uma aventura noturna digna de um filme de terror B. Cheguei em sua porta às 2:43 da madrugada, como um entregador de pizza que perdeu o endereço. O olhar dela foi uma mistura de espanto e ''não sei se me assusto ou se te ofereço café''. Ela me convidou para entrar, como se receber visitas àquela hora fosse a coisa mais normal do mundo. Parece que minha vida social agora segue um cronograma noturno. Quem precisa de sono quando se pode ter encontros inesperados às altas horas?";
+          choicesDiv.innerHTML = "<button onclick='makeChoice()'>SAIR</button><button>SAIR PELA JANELA</button>";
+          break;
+          
+          case 1.15:
+          document.body.style.backgroundImage = "url('')";
+          storyDiv.innerHTML = "";
+          choicesDiv.innerHTML = "";
+          break;
+        case 1.13:
+          document.body.style.backgroundImage = "url('')";
+          storyDiv.innerHTML = "O café estava incrível, acho que até ganhei superpoderes! Mas aí, no segundo gole, engasguei feio e fiquei azulzinho. Saí correndo de casa parecendo um smurf em apuros, pedindo ajuda na rua!";
+          choicesDiv.innerHTML = "";
+          break;
+        case 1.16:
+          document.body.style.backgroundImage = "url('https://media1.tenor.com/m/od9KTThn64oAAAAC/adventure-time-jake-the-dog.gif')";
+          storyDiv.innerHTML = "Ignoro o fantasma e decido manter a calma. Vou até o quintal dos fundos, onde o cachorro está esperando ansiosamente pela sua refeição gourmet!";
+          choicesDiv.innerHTML = "<button onclick='()'>DAR RAÇÃO</button> <button onclick='()'>DEIXAR COM FOME</button>";
+          break;
+        case 1.15:
+          document.body.style.backgroundImage = "url('')";
+          storyDiv.innerHTML = "";
+          choicesDiv.innerHTML = "";
+          break;
+        case 1.17:
+          document.body.style.backgroundImage = "url('https://bestanimations.com/media/coffee/1620101935coffee-animated-gif-5.gif')";
+          storyDiv.innerHTML = "Mas que confusão é essa? Acabei colocando sal nesse bendito café! Por que Deus, por quê? Agora ele está amargo feito fel! O que diabos faço com esse café?";
+          choicesDiv.innerHTML = "<button onclick='makeChoice(1.19)'>BEBER O CAFÉ</button> <button onclick='makeChoice(1.18)'>JOGAR FORA</button>";
+          break;
+        case 1.18:
+          document.body.style.backgroundImage = "url('')";
+          storyDiv.innerHTML = "Jogo o café fora, um belo desperdício! Olho para o relógio e já são 06:30. Corro para o armário e visto minha roupa de trabalho. Ah, e não posso esquecer do toque de perfume, afinal, quem sabe onde esse dia vai me levar!";
+          choicesDiv.innerHTML = "<button onclick='makeChoice(1.21)'>IR TRABALHAR</button><button onclick='makeChoice(1.26)'>FALTAR O TRABALHO</button>";
+          break;
+        case 1.19:
+          document.body.style.backgroundImage = "url('')";
+          storyDiv.innerHTML = "Dou um gole no café e me surpreendo ao perceber que está absurdamente doce, nada amargo como eu esperava. Olho para o pote que pensei ser de sal e, para minha surpresa, era açúcar. Mas a surpresa não para por aí! Ao abrir o pote de açúcar, em vez de açúcar, encontro um pacote de veneno para ratos. Talvez tenha feito uma troca acidental de potes. A vida é cheia de surpresas!";
+          choicesDiv.innerHTML = "";
+          break;
+        case 1.21:
+          document.body.style.backgroundImage = "url('')";
+          storyDiv.innerHTML = "Arrastei-me até meu local de tortura disfarçado de trabalho. Aquele dia estava mais cheio de caos do que um circo de pulgas em um cachorro de três pernas. O chefe estava mais irritado do que uma galinha que descobriu que botou o ovo em cima de um ninho de formigas. Ele encheu meu saco o dia todo, como se fosse o diretor de uma peça teatral chamada ''O Drama do Escritório''. Não aguentei e, num momento de iluminação cômica, transformei o escritório em uma festa de aniversário de criança descontrolada. Resultado? Fui aplaudido de pé e demitido como o palhaço da festa.";
+          choicesDiv.innerHTML = "<button onclick='makeChoice(1.21)'>SAIR DO TRABALHO</button><button onclick='makeChoice(1.23)'>MATAR O CHEFE</button>";
+          break;
+        case 1.23:
+          document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fe1.pxfuel.com%2Fdesktop-wallpaper%2F758%2F884%2Fdesktop-wallpaper-american-psycho-poster-by-nikita-abakumov-patrick-bateman.jpg&f=1&nofb=1&ipt=8c64bc704c62a2a19834855ab45ad0c04c4b7334302b532826562060d9ba381c&ipo=images')";
+          storyDiv.innerHTML = "Agarro um machado que magicamente aparece no corredor anti-incêndio, como se fosse uma promoção de ''compre uma caixa de extintores, leve um machado de brinde''. Corro em direção ao escritório do ex-chefe, onde ele estava tranquilamente provavelmente assinando minha demissão. Acertei 28 machadadas em sua cabeça, como se estivesse jogando ''Whack-a-Boss'' em um parque temático do inferno. Com uma raiva digna de vilão de desenho animado, dou um cuspe dramático em sua cabeça agora mais amassada do que uma lata de refrigerante esquecida no fundo da bolsa. É nesse momento de triunfo que escuto o som de sirenes da polícia se aproximando, como se estivessem ansiosos para testemunhar meu espetáculo de demência.";
+          choicesDiv.innerHTML = "<button onclick='makeChoice(1.24)'>RENDER-SE</button><button onclick='makeChoice(1.25)'>FUGIR</button>";
+          break;
+          case 1.24:
+            document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.tenor.com%2F5Px0Qd9Fth8AAAAC%2Fcar-police.gif&f=1&nofb=1&ipt=9a1c39403d5c1839579155bd183aea3fc55100ef1cb22eeeca16f02c2204a2cc&ipo=images')";
+          storyDiv.innerHTML = "Sou preso e sentenciado a morte à cadeira elétrica <br> Bem, parece que as coisas estão ficando um pouco eletrizantes por aqui! Espero que a cadeira elétrica tenha um bom sistema de massagem embutido. Talvez seja a última vez que experimentarei algo tão ''chocante''!";
+          choicesDiv.innerHTML = "";
+          break;
+          case 1.25:
+            document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.kjHOMrzviF5zCLCEpnHa9AHaEb%26pid%3DApi&f=1&ipt=478f0cedc589be42561a7b9bc552857ffb4c2e2af2d7a66f03c3e7ea50810369&ipo=images')";
+          storyDiv.innerHTML = "Eu me vejo tentando uma fuga estilo filme de ação pelas escadas do prédio, mas, para a minha surpresa, a polícia decide transformar isso em uma corrida de obstáculos vertical. Ignoro totalmente o elevador - seria fácil demais, né? Subo as escadas como se estivesse competindo em uma maratona vertical, chegando ao último andar - a cobertura. Fico lá por uns bons 10 minutos, apreciando a vista e imaginando como os policiais devem estar ficando cansados. Mas claro, eles têm mais resistência do que eu imaginava. Antes que eu pudesse dizer ''fugi!'', eles já estavam lá, me cercando como fãs em um show. Sem saída, decido que voar é a melhor opção, então me jogo da cobertura. Nos segundos de queda, tive a sensação de estar em uma montanha-russa, até que, tragicamente, aterrissagem forçada no chão encerra meu breve episódio de ''Fugindo com Estilo''.";
+          choicesDiv.innerHTML = "";
+          break;
+          case 1.26:
+            document.body.style.backgroundImage = "url('https://wallpaperaccess.com/full/8351232.gif')";
+          storyDiv.innerHTML = "Hoje o despertador pediu demissão antes mesmo de tocar. Decidi que sou chefe de mim mesmo e promovi um feriado espontâneo. Minha única reunião será com o sofá. E quanto ao chefe barrigudo? Acho que vou mandar uma carta de amor e pedir conselhos sobre como se demitir com estilo.";
+          choicesDiv.innerHTML = " <button onclick='makeChoice(1.27)'>LIGAR PARA O CHEFE</button><button onclick='makeChoice(1.28)'>DEIXAR PARA AMANHÃ</button>";
+          break;
+          case 1.27:
+            document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia2.giphy.com%2Fmedia%2FnmJAF1FwS292qiwiCy%2Fsource.gif&f=1&nofb=1&ipt=9f3790bb6cf07f598e0f996fd5d59f075126cc9bf19e076ab226bf2630404edf&ipo=images')";
+          storyDiv.innerHTML = "''Alô, chefinho! É o Frank. Olha só, decidi dar um upgrade na minha vida e me livrar desse inferno que você chama de trabalho. Só queria agradecer por todas aquelas horas extras não remuneradas, pelos benefícios inexistentes e pelo ambiente tóxico que você cultiva com tanto carinho. Se precisar de indicação de um bom terapeuta, tô por aqui. Ah, e não se preocupe, eu não vou sentir falta. Adeus e que seus próximos funcionários tenham mais paciência do que eu.''";
+          choicesDiv.innerHTML = "";
+          break;
+          case 1.31:
+          document.body.style.backgroundImage = "url('')";
+          storyDiv.innerHTML = "Ao abrir a porta, me deparo com um velho senhor, mais perdido que cachorro em dia de mudança. Nunca tinha visto aquele rosto enrugado antes, e olha que já assisti a muitos episódios de ''Antiguidades Curiosas''. Dou uma olhada rápida no meu relógio de pulso, e lá está ele, marcando a hora dos vampiros: 05:46. O velho senhor, com um olhar de quem perdeu o último ônibus para Marte, começa a implorar por sal como se fosse a última esperança para sua receita de sopa de mandrágora. Eu não sabia se ria ou se chamava a equipe do ''Além da Imaginação''.";
+          choicesDiv.innerHTML = "<button onclick='makeChoice()'>EMPRESTAR</button><button onclick='makeChoice()'>FECHAR A PORTA</button>";
+          break;
+          case 1.32:
+            document.body.style.backgroundImage = "url('')";
+          storyDiv.innerHTML = "Meus dentes são atacados pela escova automática, e a pasta de dente é um sabor que desafia o conceito de ''refrescância''. Escovar a língua é quase um desafio de resistência. Enxáguo com o Listerine, esperando milagres. Saio do banheiro e lá está o gato preto no sofá, como se fosse o novo chefe da casa. Que reviravolta matinal!";
+          choicesDiv.innerHTML = "<button onclick='makeChoice()'>ADOTAR O GATO</button><button onclick='makeChoice(1.33)'>TIRAR DE CASA</button>";
+          break;
+          case 1.33:
+            document.body.style.backgroundImage = "url('https://media1.giphy.com/media/3oEjHFHaBKjH2lojSg/giphy.gif?cid=6c09b9521vc0vb09ka3ipxgurve8p3l0hsjk00op6m6sk0sd&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g')";
+          storyDiv.innerHTML = "Lá vou eu, todo confiante, tentar pegar o gato, mas ele não quer papo e me presenteia com alguns arranhões como souvenir. Rapidamente, pego um pano, agindo como se estivesse manuseando material radioativo, e tento contê-lo sem mais danos à minha pele. Enquanto isso, começo a considerar a ideia de transformar minha vizinha em uma nova dona, jogando o ''bichano encrenqueiro'' no seu quintal. Talvez assim ele encontre um novo lar onde seus arranhões sejam mais apreciados.";
+          choicesDiv.innerHTML = "<button onclick'makeChoice()'>JOGAR NO PÁTIO VIZINHO</button> <button onclick='makeChoice(1.34)'>MATAR O GATO</button>";
+          break;
+          case 1.34:
+          document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipground.com%2Fimages%2Fdead-cat-clipart-8.jpg&f=1&nofb=1&ipt=64341547f2148e8cfb4295c1b8607c40a6107250c5757969ea368fc9d79723c5&ipo=images')";
+          storyDiv.innerHTML = "Segurando a bolsa como se fosse uma batata quente, amarrei tantos nós que até o gato ficou confuso. Peguei minha vassoura, pronta para uma batalha épica entre homem e felino. Não sei se foi o gato ou eu quem saiu desmaiado da luta, mas sem perder tempo, joguei a bolsa no rio, pensando que, se a surra não o matou, o mergulho certamente fará o serviço. E assim, minha aventura como exterminador de gatos chegou ao fim. Obrigado, mas prefiro lidar com problemas mais simples, como resolver um cubo mágico enquanto faço malabarismos com uma mão só.";
+          choicesDiv.innerHTML = "";
+          break;
+          
+        case 1.15:
+          document.body.style.backgroundImage = "url('')";
+          storyDiv.innerHTML = "";
+          choicesDiv.innerHTML = "";
+          break;
+          
       }
     }
-    var a4 = document.getElementById('entrarnaporta');
-    var display = 0;
     
-    function enterdoor() {
-      if (display == 1) {
-        a4.style.display = 'block'
-        display = 0;
-      }
-      else {
-        a4.style.display = 'none'
-        display = 1;
-      }
-    }
-    var a5 = document.getElementById('dentro-in');
-    var display = 0;
-    
-    function inside() {
-      if (display == 1) {
-        a5.style.display = 'block'
-        display = 0;
-      }
-      else {
-        a5.style.display = 'none'
-        display = 1;
-      }
-    }
-    var a6 = document.getElementById('ajuda');
-    var display = 0;
-    
-    function help() {
-      if (display == 1) {
-        a6.style.display = 'block'
-        display = 0;
-      }
-      else {
-        a6.style.display = 'none'
-        display = 1;
-      }
-    }
-    var a7 = document.getElementById('drinkcoffee');
-    var display = 0;
-    
-    function drinkCoffee() {
-      if (display == 1) {
-        a7.style.display = 'block'
-        display = 0;
-      }
-      else {
-        a7.style.display = 'none'
-        display = 1;
-      }
-    }
   </script>
+  
 </body>
+
 </html>
