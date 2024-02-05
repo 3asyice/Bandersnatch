@@ -85,6 +85,9 @@
 <audio id="myAudio3">
   <source src="https://raw.githubusercontent.com/3asyice/Bandersnatch/main/Lorenzo Senni - The Shape of Trance to Come.mp3">
 </audio>
+<audio id="myAudio4">
+  <source src="https://raw.githubusercontent.com/3asyice/Bandersnatch/main/Too Shy  2004 Remaster .mp3">
+</audio>
 
   <div class="container">
     <div id="story">Eu desperto às 5:34 da manhã, quando até o Sol ainda está bocejando.</div>
@@ -110,6 +113,12 @@ function playsong() {
   var audio2 = document.getElementById("myAudio2");
   audio2.pause();
   audio3.play();
+}
+function playMusic() {
+  var audio4 = document.getElementById("myAudio4");
+  var audio = document.getElementById("myAudio");
+  audio.pause();
+  audio4.play();
 }
 
     function makeChoice(choice) {
@@ -175,7 +184,7 @@ function playsong() {
           case 1.51:
             document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Ff0%2Fc2%2F64%2Ff0c264e5f18ee610c88ca829cd46f32e.gif&f=1&nofb=1&ipt=dfef7e6b26e457e3bb1ad8756d373f2fb3f15fde4fe7c8bf3aabf4e934f07c14&ipo=images')";
           storyDiv.innerHTML = "A pobre criança saiu correndo como se tivesse visto um fantasma. Bem, na verdade, viu. Eu flutuei até ele, e numa troca rápida de almas, agora eu tinha um corpo novo e ele... bem, ele tinha passado para o outro lado, onde não há mais problemas de matemática ou alergias a amendoim. Ser criança novamente era uma delícia, até que percebi que o pobre garotinho virara um fantasma chato, me encarando com aqueles olhos de cachorro abandonado. Que troca desvantajosa! Eu só queria brincar de pega-pega, não de jogos de assombração.";
-          choicesDiv.innerHTML = "<button onclick='makeChoice(1.52)'>ESCOLA</button><button>FALTAR</button>";
+          choicesDiv.innerHTML = "<button onclick='makeChoice(1.52); playMusic()'>ESCOLA</button><button>FALTAR</button>";
           break;
           case 1.52:
             document.body.style.backgroundImage = "url('')";
@@ -189,7 +198,7 @@ function playsong() {
           break;
           case 1.54:
             document.body.style.backgroundImage = "url('')";
-          storyDiv.innerHTML = "Lá fui eu, seguindo a Paloma em uma aventura noturna digna de um filme de terror B. Cheguei em sua porta às 2:43 da madrugada, como um entregador de pizza que perdeu o endereço. O olhar dela foi uma mistura de espanto e ''não sei se me assusto ou se te ofereço café''. Ela me convidou para entrar, como se receber visitas àquela hora fosse a coisa mais normal do mundo. Parece que minha vida social agora segue um cronograma noturno. Quem precisa de sono quando se pode ter encontros inesperados às altas horas?";
+          storyDiv.innerHTML = "Lá fui eu, seguindo a Paloma em uma aventura noturna digna de um filme de terror. Cheguei em sua porta às 2:43 da madrugada, como um entregador de pizza que perdeu o endereço. O olhar dela foi uma mistura de espanto e ''não sei se me assusto ou se te ofereço café''. Ela me convidou para entrar, como se receber visitas àquela hora fosse a coisa mais normal do mundo. Parece que minha vida social agora segue um cronograma noturno. Quem precisa de sono quando se pode ter encontros inesperados às altas horas?";
           choicesDiv.innerHTML = "<button onclick='makeChoice()'>SAIR</button><button>SAIR PELA JANELA</button>";
           break;
           
@@ -292,4 +301,4 @@ function playsong() {
   
 </body>
 
-  </html>
+    </html>
