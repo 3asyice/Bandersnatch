@@ -75,15 +75,43 @@
 </style>
 
 <body>
+  <audio id="myAudio">
+  <source src="https://raw.githubusercontent.com/3asyice/Bandersnatch/main/Thompson Twins - Hold Me Now.mp3">
+</audio>
+<audio id="myAudio2">
+  <source src="https://raw.githubusercontent.com/3asyice/Bandersnatch/main/Frankie Goes To Hollywood - Relax  Don't Do It .mp3">
+</audio>
+
+<audio id="myAudio3">
+  <source src="https://raw.githubusercontent.com/3asyice/Bandersnatch/main/Lorenzo Senni - The Shape of Trance to Come.mp3">
+</audio>
+
   <div class="container">
     <div id="story">Eu desperto às 5:34 da manhã, quando até o Sol ainda está bocejando.</div>
     <div id="choices">
-      <button onclick="makeChoice(1)">LEVANTAR</button>
-      <button onclick="makeChoice(2)">DORMIR</button>
+      <button onclick="makeChoice(1); startMusic()">LEVANTAR</button>
+      <button onclick="makeChoice(2); startSong()">DORMIR</button>
     </div>
   </div>
   <script src="script.js"></script>
   <script>
+  function startMusic() {
+  var audio = document.getElementById("myAudio");
+  audio.play();
+}
+
+function startSong() {
+  var audio2 = document.getElementById("myAudio2");
+  audio2.play();
+}
+
+function playsong() {
+  var audio3 = document.getElementById("myAudio3");
+  var audio2 = document.getElementById("myAudio2");
+  audio2.pause();
+  audio3.play();
+}
+
     function makeChoice(choice) {
       var storyDiv = document.getElementById('story');
       var choicesDiv = document.getElementById('choices');
@@ -203,7 +231,7 @@
         case 1.21:
           document.body.style.backgroundImage = "url('')";
           storyDiv.innerHTML = "Arrastei-me até meu local de tortura disfarçado de trabalho. Aquele dia estava mais cheio de caos do que um circo de pulgas em um cachorro de três pernas. O chefe estava mais irritado do que uma galinha que descobriu que botou o ovo em cima de um ninho de formigas. Ele encheu meu saco o dia todo, como se fosse o diretor de uma peça teatral chamada ''O Drama do Escritório''. Não aguentei e, num momento de iluminação cômica, transformei o escritório em uma festa de aniversário de criança descontrolada. Resultado? Fui aplaudido de pé e demitido como o palhaço da festa.";
-          choicesDiv.innerHTML = "<button onclick='makeChoice(1.21)'>SAIR DO TRABALHO</button><button onclick='makeChoice(1.23)'>MATAR O CHEFE</button>";
+          choicesDiv.innerHTML = "<button onclick='makeChoice(1.21)'>SAIR DO TRABALHO</button><button onclick='makeChoice(1.23); playsong()'>MATAR O CHEFE</button>";
           break;
         case 1.23:
           document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fe1.pxfuel.com%2Fdesktop-wallpaper%2F758%2F884%2Fdesktop-wallpaper-american-psycho-poster-by-nikita-abakumov-patrick-bateman.jpg&f=1&nofb=1&ipt=8c64bc704c62a2a19834855ab45ad0c04c4b7334302b532826562060d9ba381c&ipo=images')";
