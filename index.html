@@ -89,6 +89,7 @@
 <audio id="myAudio4">
   <source src="https://raw.githubusercontent.com/3asyice/Bandersnatch/main/Too Shy  2004 Remaster .mp3">
 </audio>
+<audio id="myAudio5"><source src="https://raw.githubusercontent.com/3asyice/Bandersnatch/main/M83 'Midnight City' .mp3"></audio>
 
   <div class="container">
     <div id="story">Eu desperto às 5:34 da manhã, quando até o Sol ainda está bocejando.</div>
@@ -121,6 +122,13 @@ function playMusic() {
   audio.pause();
   audio4.play();
 }
+function playMusicc() {
+  var audio4 = document.getElementById('myAudio4');
+  var audio5 = document.getElementById('myAudio5');
+  audio4.pause();
+  audio5.play();
+  
+}
 
     function makeChoice(choice) {
       var storyDiv = document.getElementById('story');
@@ -133,7 +141,7 @@ function playMusic() {
           choicesDiv.innerHTML = "<button onclick='makeChoice(1.1)'>PERGUNTAR</button><button onclick='makeChoice(1.2)'>MANDAR EMBORA</button>";
           break;
         case 2:
-          document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg2.joyreactor.com%2Fpics%2Fpost%2Fhotel-hallway-trippy-gif-1978883.gif&f=1&nofb=1&ipt=c06397ee38c1a73c230b9b8fdfbd0b0c07806966c1aee66883727dec6b8e8890&ipo=images')";
+          document.body.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzv4a9T8-BAVDl20es8g_rVuntmjGMsAQubA&usqp=CAU')";
           storyDiv.innerHTML = "Sigo dormindo profundamente... Profundamente... Tenho um pesadelo estranho... Zzz... Um cara fantasiado de coelho me persegue, me transforma em marionete e, de repente, levo uma pancada na cabeça no meu próprio sonho. Sangue pra todo lado, preciso urgentemente de um médico! Mas, espera, isso é um sonho, certo? Acordei num pulo! Agora, a dúvida cruel: banheiro ou cozinha?";
           choicesDiv.innerHTML = "<button onclick='makeChoice(2.1)'>BANHEIRO</button><button onclick='makeChoice(2.2)'>COZINHA</button>";
           break;
@@ -153,7 +161,7 @@ function playMusic() {
           choicesDiv.innerHTML = "<button onclick='makeChoice(1.31)'>ATENDER</button><button onclick='makeChoice(1.32)'>ESCOVAR OS DENTES</button>";
           break;
         case 2.2:
-          document.body.style.backgroundImage = "url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Forig00.deviantart.net%2Fb7de%2Ff%2F2017%2F187%2F2%2F1%2Fcoffee_gif_by_javaleaf-dbfc7gt.gif&f=1&nofb=1&ipt=2763d429576630a161475f87d644561ef1ca8e0183c753d306ad75d3079867a7&ipo=images')";
+          document.body.style.backgroundImage = "url('https://storage.googleapis.com/pai-images/31c223b45c9e4b608928491722575ecc.jpeg')";
           storyDiv.innerHTML = "Entro na cozinha e começo a preparar um café, daqueles modestos e refinados, sabe? Penso: será que coloco açúcar?";
           choicesDiv.innerHTML = "<button onclick='makeChoice(1.13)'>COLOCAR AÇÚCAR</button> <button onclick='makeChoice(1.17)'>COLOCAR SAL</button>";
           break;
@@ -200,7 +208,7 @@ function playMusic() {
           case 1.54:
             document.body.style.backgroundImage = "url('')";
           storyDiv.innerHTML = "Lá fui eu, seguindo a Paloma em uma aventura noturna digna de um filme de terror. Cheguei em sua porta às 2:43 da madrugada, como um entregador de pizza que perdeu o endereço. O olhar dela foi uma mistura de espanto e ''não sei se me assusto ou se te ofereço café''. Ela me convidou para entrar, como se receber visitas àquela hora fosse a coisa mais normal do mundo. Parece que minha vida social agora segue um cronograma noturno. Quem precisa de sono quando se pode ter encontros inesperados às altas horas?";
-          choicesDiv.innerHTML = "<button onclick='makeChoice()'>IR EMBORA</button><button onclick='makeChoice(1.98)'>SE DESPEDIR</button>";
+          choicesDiv.innerHTML = "<button onclick='makeChoice()'>IR EMBORA</button><button onclick='makeChoice(1.98); playMusicc()'>SE DESPEDIR</button>";
           break;
           
           
@@ -318,4 +326,4 @@ function playMusic() {
   
 </body>
 
-        </html>
+  </html>
