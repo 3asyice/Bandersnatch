@@ -11,7 +11,7 @@
 <style>
   body,
   html {
-    color: rgba(0, 0, 0, 1);
+    color: #FFFFFF;
     font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
     height: 100%;
@@ -41,7 +41,7 @@
 
   #story {
     text-align: justify;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border: 1px solid rgba(255, 247, 0, 1);
     border-radius: 10px;
@@ -53,12 +53,14 @@
   }
 
   #choices button {
+    color:#FFFFFF;
     font-size: 14px;
     margin: 5px;
     text-align: justify;
     font-weight: bold;
     padding: 10px;
-    background-color: rgba(122, 122, 122, 1);
+    background-color: 
+    rgba(48, 48, 48, 1);
     border-radius: 20px;
   }
 
@@ -198,8 +200,9 @@ function playMusic() {
           case 1.54:
             document.body.style.backgroundImage = "url('')";
           storyDiv.innerHTML = "Lá fui eu, seguindo a Paloma em uma aventura noturna digna de um filme de terror. Cheguei em sua porta às 2:43 da madrugada, como um entregador de pizza que perdeu o endereço. O olhar dela foi uma mistura de espanto e ''não sei se me assusto ou se te ofereço café''. Ela me convidou para entrar, como se receber visitas àquela hora fosse a coisa mais normal do mundo. Parece que minha vida social agora segue um cronograma noturno. Quem precisa de sono quando se pode ter encontros inesperados às altas horas?";
-          choicesDiv.innerHTML = "<button onclick='makeChoice()'>SAIR</button><button>SAIR PELA JANELA</button>";
+          choicesDiv.innerHTML = "<button onclick='makeChoice()'>IR EMBORA</button><button onclick='makeChoice(1.98)'>SE DESPEDIR</button>";
           break;
+          
           
           case 1.15:
           document.body.style.backgroundImage = "url('')";
@@ -287,12 +290,27 @@ function playMusic() {
           choicesDiv.innerHTML = "";
           break;
           
+          case 1.98:
+          document.body.style.backgroundImage = "url('https://i.pinimg.com/originals/28/95/21/2895213825311f1baede1d81d024ff9a.gif')";
+          storyDiv.innerHTML = "Depois de uma longa noite de muito papo, decidimos sair com o carro de Paloma. Ela fez com que eu fosse o seu motorista mesmo eu não sabendo dirigir. Ao longo do caminho... ficamos perdidos e tivemos que escolher a estrada do caminho direito ou a estrada do caminho esquerdo.";
+          choicesDiv.innerHTML = "<button onclick'makeChoice()'>ESQUERDA</button> <button onclick='makeChoice(1.35)'>DIREITA</button>";
+          break;
+          case 1.35:
+            document.body.style.backgroundImage = "url('https://cdna.artstation.com/p/assets/images/images/035/291/762/original/-chiye1026-future-car.gif?1614610385')";
+          storyDiv.innerHTML = "Vou pela estrada do caminho direito. O caminho é bastante escuro mesmo com os faróis iluminando a frente. ";
+          choicesDiv.innerHTML = "";
+          break;
+          case 1.15:
+            document.body.style.backgroundImage = "url('')";
+          storyDiv.innerHTML = "";
+          choicesDiv.innerHTML = "";
+          break;
         case 1.15:
           document.body.style.backgroundImage = "url('')";
           storyDiv.innerHTML = "";
           choicesDiv.innerHTML = "";
           break;
-          
+         
       }
     }
     
@@ -300,4 +318,4 @@ function playMusic() {
   
 </body>
 
-  </html>
+        </html>
